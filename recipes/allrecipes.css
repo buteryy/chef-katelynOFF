@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+ @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+/* navlogo.png image design*/
+.navLogo{
+  margin: 0; 
+  padding-right: 1.5em; 
+  padding-top: 0.3em; 
+  width: 27em;
+}
+
+/* NAV div style*/
+.navDiv{
+  background-color: #EFE5E9; 
+  padding-left: 3em; 
+  padding-right: 3em;
+  display: flex; 
+  align-items: center;
+}
+
+
+/* Home Page HEADING */
+h1 {
+  color: #AA9688;
+  font-family: 'Optima';
+  margin: 0; 
+  font-size: 29px;
+  font-weight: 150;
+  margin-left: 1em;
+  flex: 1; 
+  vertical-align:middle;
+
+  }
+
+
+/* NAV BAR*/
+nav a:hover {
+  color: hotpink;
+  text-decoration:underline;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center; 
+  background-color: white;
+  margin-left: 30px;
+  margin: 0;
+  overflow: 0;
+  overflow-y: scroll;
+  vertical-align: middle;
+
+}
+
+.navUL {
+  list-style-type: none;
+  font-family: 'Optima';
+  font-size: 23px;
+  vertical-align:middle;
+}
+
+.navUL li {
+  display: inline;
+  margin-left: 30px; 
+  margin-right: 40px;
+  font-family: 'Playfair Display';
+}
+.navUL li a {
+  text-decoration: none;
+  color: #AA9688;
+}
+
+.navUL li a: hover {
+  text-decoration: underline;
+  text-decoration-color: #AA9688;
+}
+
+
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:#EFE5E9 ;
+    min-width: 260px;
+    box-shadow: 0px 0px 16px 0px;
+    z-index: 1;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: .5em;
+    padding-right: .5em;
+  
+  }
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown:hover .dropdown-content{
+    display: block;
+  }
+  
+  .dropdownItems{
+    text-align: left;
+  }
+  
+  .dropdownRecipes{
+    font-size: 18px; 
+    display: flex; 
+    flex-direction: 
+    column; align-items: start; 
+    text-align: left;
+    justify-content: start;
+    list-style: none;
+    line-height: 30px;
+  }
+
+  /*RECIPES HEADER*/
+  .recipesheader{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10em;
+    
+  }
+  .headerimg{
+    width: 50vh;
+  }
+.recipesheadertext{
+    font-size: 3.5em;
+    font-family: 'Playfair Display';
+    color: #fab4bc; 
+}
+.ingredients{
+    color: #7c695c; 
+    line-height: 30px;
+    font-size: 1.5em;
+}
+.recipestitle{
+    font-size: 2.5em;
+    font-family: 'Playfair Display';
+    color: #7c695c; 
+    font-weight: bold;
+    font-style: italic;
+}
+
+.instructions {
+  color: #7c695c; 
+  line-height: 30px;
+  font-size: 1.5em;
+  
+}
