@@ -70,9 +70,9 @@ li a {
   color: #AA9688;
 }
 
-li a: hover {
+li a:hover {
   text-decoration: underline;
-  text-decoration-color: #AA9688;
+  text-decoration-color: "#AA9688";
 }
 
 
@@ -157,9 +157,9 @@ li a: hover {
 }
 
 .copyright {
-  font-family: 'Times New Roman':
+  font-family: 'Times New Roman';
   text-align: center; 
-  padding: 7em;">
+  padding: 7em;
 
 }
   
@@ -191,3 +191,33 @@ li a: hover {
   gap: 22px;
 }
 
+
+
+footer{
+  background-color: #EFE5E9;
+  text-align: center;
+  padding-top: 2em;
+}
+
+
+
+
+.footerbutton{
+  margin-left:1em; 
+  margin-right: 1em; 
+  background-color: #a6998e;
+  margin-top: 20px;
+  padding: 12px 24px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Playfair Display";
+}
+ .footerbutton:hover{
+  background-color: #4d3e35;
+  transform: scale(1.05);
+ }

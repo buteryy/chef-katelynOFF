@@ -33,22 +33,24 @@
       <script>
         const recipes = [
             {title: "Jellycat Cake | Simple 4' inch Vanilla Cake", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html"},
-            {title: "Checkerboard Cookies", image: "assets/checkerboardCookiesYT.png", url: "#"},
-            {title: "Buttery Soft Coffee Cake", image: "assets/coffeeCake.jpg", url: "#"},
-            {title: "Fluffy Coffee Buns", image: "assets/fluffyCoffeeBuns.jpg", url: "#"},
-            {title: "Cinnamon Cruffins", image: "assets/cinnamonCruffins.jpg", url: "#"},
+            {title: "Checkerboard Cookies", image: "assets/checkerboardCookiesYT.png", url: "./recipes/checkerboardCookies.html"},
+            {title: "Buttery Soft Coffee Cake", image: "assets/coffeeCake.jpg", url: "./recipes/coffeeCake.html"},
+            {title: "Fluffy Coffee Buns", image: "assets/fluffyCoffeeBuns.jpg", url: "./recipes/coffeeBuns.html"},
+            {title: "Cinnamon Cruffins", image: "assets/cinnamonCruffins.jpg", url: "./recipes/cinnamonCruffins.html"},
+            {title: "Petit French Rolls | Beginner Friendly", image: "assets/peititFrenchRolls.jpg", url: "./recipes/frenchRolls.html"},
         ];
 
         function recipeCard(recipe){
             return `
-                <div class='videos' style= 'background-color:#ECE3D6;'>
+                <a href='${recipe.url}'>
+                  <div class='videos' style= 'background-color:#ECE3D6;'>
           <img 
             src = '${recipe.image}'  
             alt = 'Fluffy Buttery French Rolls'
             class = "comingsoon2" 
             style = "width:18vw">
-           <p class="recipesText">  <a class="recipesText" href='${recipe.url}'>${recipe.title}</a> </p>
-        </div>
+           <p class="recipesText">  ${recipe.title} </p>
+        </div> </a>
             `;
         }
         function displayRecipes(){
@@ -63,4 +65,22 @@
         }
         displayRecipes();
       </script>
+
+
+
+
+<footer>
+  <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Website Directory:</p>
+  <a href="index.html"><button class="footerbutton">Home</button></a>
+   <a href="recipes.html"> <button class="footerbutton">Recipes</button></a>
+   <a href="blog.html"><button class="footerbutton">Blog</button></a>
+   <a href="music.html"><button class="footerbutton">Music</button></a>
+    <br> 
+    <div style="justify-content: center;">
+      <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Socials:</p>
+    <a href="https://www.instagram.com/chefkbakes/"><img style=" width: 6vh;" src="assets/igLogo.png"></a>
+              <a href="https://www.youtube.com/@ChefKatelyn"><img style=" margin-top:0; width: 7vh; mix-blend-mode: multiply;" src="assets/ytt.png"></a>
+            </div>
+    <br>Copyright &copy 2024 Chef Katelyn
+    <footer>
 </body>
