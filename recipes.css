@@ -1,0 +1,226 @@
+
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+ @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+/* navlogo.png image design*/
+.navLogo{
+  margin: 0; 
+  padding-right: 1.5em; 
+  padding-top: 0.3em; 
+  width: 27em;
+}
+
+/* NAV div style*/
+.navDiv{
+  background-color: #EFE5E9; 
+  display: flex; 
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+}
+
+
+/* Home Page HEADING */
+h1 {
+  color: #AA9688;
+  font-family: 'Optima';
+  margin: 0; 
+  font-size: 29px;
+  font-weight: 150;
+  margin-left: 1em;
+  flex: 1; 
+  vertical-align:middle;
+
+  }
+
+
+/* NAV BAR*/
+nav a:hover {
+  color: hotpink;
+  text-decoration:underline;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center; 
+  background-color: white;
+  margin-left: 30px;
+  margin: 0;
+  overflow: 0;
+  overflow-y: scroll;
+  vertical-align: middle;
+
+}
+
+ul {
+  list-style-type: none;
+  font-family: 'Optima';
+  font-size: 23px;
+  vertical-align:middle;
+}
+
+li {
+  display: inline;
+  margin-left: 30px; 
+  margin-right: 40px;
+  font-family: 'Playfair Display';
+}
+li a {
+  text-decoration: none;
+  color: #AA9688;
+}
+
+li a:hover {
+  text-decoration: underline;
+  text-decoration-color: "#AA9688";
+}
+
+
+.headerFont{
+  font-size: 3em;
+  font-family: 'Playfair Display';
+  color: #7c695c;
+  text-align: center;
+
+}
+/*SEARCH BAR*/
+.search-container{
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+ 
+  align-items: center;
+}
+
+.footerbutton{
+  margin-left:1em; 
+  margin-right: 1em; 
+  background-color: #a6998e;
+  padding: 12px 24px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Playfair Display";
+}
+ .footerbutton:hover{
+  background-color: #4d3e35;
+  transform: scale(1.05);
+ }
+
+ .box-control{
+  width:20%;
+  padding: 10px;
+  height: 5vh;
+  font-family: "Playfair Display";
+  font-size: 18px;
+  color: #4d3e35;
+}
+
+
+
+
+
+
+/*RECENT RECIPES*/
+
+.recentrecipes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.recipes {
+  padding:.5em;
+  margin-inline: 1em;
+  text-align: center;
+}
+
+.recipes img{
+  padding-bottom:0.1em;
+  width:19vw;
+}
+
+.recipes p{
+  padding-inline: 1em;
+  padding-top:1.2em;
+  font-size: 2em;
+}
+
+.frenchrolltextpic {
+  margin-bottom: 2em;
+}
+
+.copyright {
+  font-family: 'Times New Roman';
+  text-align: center; 
+  padding: 7em;
+
+}
+  
+
+.videos {
+ padding:1.5em;
+  margin-inline: 2em;
+  text-align: center;
+  
+  width: 20vw;
+
+}
+
+.recipesText{
+  font-family: "Playfair Display"; 
+  color:#7C695C;
+  text-decoration: underline;
+  font-size: 20px
+}
+
+.videos:hover{
+  outline: 5px solid pink;
+  
+}
+
+.newrecipes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+
+
+footer{
+  background-color: #EFE5E9;
+  text-align: center;
+  padding-top: 2em;
+}
+
+
+
+
+.footerbutton{
+  margin-left:1em; 
+  margin-right: 1em; 
+  background-color: #a6998e;
+  margin-top: 20px;
+  padding: 12px 24px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Playfair Display";
+}
+ .footerbutton:hover{
+  background-color: #4d3e35;
+  transform: scale(1.05);
+ }

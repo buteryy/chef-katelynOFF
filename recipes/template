@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>replit</title>
+      <link href="allrecipes.css" rel="stylesheet" type="text/css" />
+
+
+     
+
+    </head>
+    <body>
+<header>
+    <div class="navDiv">
+        <a href="https://chef-katelyn.com/index.html">
+            <img class="navLogo" src="../assets/navlogo.png">
+        </a>
+        <nav style="margin-left: auto;">
+            <ul class="navUL" style="text-align: right;">  
+                <li><a href="../index.html">Home</a></li>
+                
+                
+                <div class="dropdown">
+                  
+                  <li><a href="../recipes.html">Recipes</a></li>
+                  <div class="dropdown-content">
+                    <ul class= dropdownRecipes>
+                      
+                      <li class="dropdownItems"><a href="recipes.html">Jellycat Collection</a></li>
+                      <li class="dropdownItems"><a href="recipes.html">Deserts</a></li>
+                      <li class="dropdownItems"><a href="recipes.html">Breads</a></li>
+                      <li class="dropdownItems"><a href="recipes.html">Cooking</a></li>
+                    </ul>
+
+                  </div>
+                </div>
+                
+                
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../music.html">Music</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="recipesheader">
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q4RdQjjM_tk?si=RAHAJchImi1zvGYF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p class="recipesheadertext"><b><i>Adorable Jellycat Cake </i></b><br> Simple 4' inch Vanilla Cake</p>
+    </div>
+    
+    <div>
+        <img class = "headerimg" src="../assets/jellycatForm.png">
+    </div>
+</div>
+
+
+<div class="recipesheader">
+    <div>
+<p class="recipestitle">Vanilla Cake:</p>
+   <ul class="ingredients">
+    <li> 3/4 cup flour</li>
+    <li>1/2 cup milk</li>
+    <li>1 egg, room temperature</li>
+    <li>1/2 cup sugar</li>
+    <li>5 tbsp unsalted butter, softned</li>
+    <li>2 tbsp vegetable oil</li>
+    <li>Pinch of salt</li>
+    <li>1 tsp vanilla extract</li>
+    <li>1 tsp baking powder</li>
+    <li>Pinch of baking soda</li>
+</ul>
+   
+
+    </div>
+    <div>
+        <p class="recipestitle">Whipped Cream Frosting: </p>
+        <ul class="ingredients">
+            <li> 1 1/2 cup heavy cream</li>
+            <li>1/2 cup powdered sugar</li>
+            <li>2 tbsp hot watere</li>
+            <li>1 tsp gelatin</li>
+            <li>1 tsp vanilla extract</li>
+            
+        </ul>
+        <p class="recipestitle">Fondant(Optional) </p>
+        <ul class="ingredients">
+            <li> 3 large marshmallows</li>
+            <li>1/2 tsp oil</li>
+            <li>Dash of Vanill Extract</li>
+            <li>Powdered Sugar as needed</li>
+            
+        </ul>
+    </div>
+</div>
+<p style="text-align: center;"class="recipestitle">Instructions</p>
+<div class="instructionsdiv">
+    
+<ol class="instructions">
+    <li>Mix your flour, salt, baking powder, and baking soda in a large bowl </li>
+    <li>Then, add in your unsalted butter and mix </li>
+    <li>Add in your vanilla extract, milk, and oil and mix </li>
+    <li>Add in your egg and mix until combined </li>
+    <li>Oil your cake trays and pour your batter into your 2 trays </li>
+    <li>Bake your cakes at 350F for around 14 minutes </li>
+    <li>Take them out and let them cool </li>
+    <li>In a small bowl, mix your gelatin and hot water, set it aside </li>
+    <li>In a large bowl, mix your whipping cream and powdered sugar together until it thickens, then add your gelatin(if your gelatin has solidified, put it in the microwave for 10 sec) </li>
+    <li>Mix until stiff peaks </li>
+    <li> I decided to make fondant for the feet of the jellycat cake, however it is optional and you can dye your frosting brown instead </li>
+    <li>n a microwavable bowl, put 3 large marshmallows 1 tsp of water, and 1/2 tsp of oil </li>
+    <li>Microwave for 30 seconds then mix, for the brown color I used 2 drops red, 3 drops green, and 1 drop black (optional) </li>
+    <li> Mix until food coloring is combined </li>
+    <li>Then, slowly add in powdered sugar, add enough until it becomes a doughy texture </li>
+    <li> Kneed the fondant with your hands, and form into leg shape </li>
+    <li>Take a small amount of your whipping cream and dye it black for the face and also brown in another bowl if you did not make fondant </li>
+    <li>Assemble the cake and enjoy!!!</li>
+</ol>
+</div>
+    </body>
+</html>
