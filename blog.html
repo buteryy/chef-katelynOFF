@@ -18,15 +18,32 @@
           </ul>
       </nav>
   </div>
+
+
+
 <p class="headerFont"> <i>Recipes</i></p>
 </head>
 <body>
+
+
+
+
+
   <div style="display: flex; justify-content: center;">
+    <a href="./blogs/mooncake.html">
   <div class="recentblog">
     <img style="width: 40vh;" src="assets/jellycatCakeYT.jpg">
 
   </div>
+</a>
 </div>
+
+
+
+
+
+
+
 
 <div class="search-container">
   <input class="box-control" type="search" id="search">
@@ -40,25 +57,44 @@
 
       </div>
       <script>
-        const recipes = [
-            {title: "Coming Soon...", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html"},
-            {title: "Coming Soon...", image: "assets/checkerboardCookiesYT.png", url: "#"},
-            {title: "Coming Soon...", image: "assets/coffeeCake.jpg", url: "#"},
-            {title: "Coming Soon...", image: "assets/fluffyCoffeeBuns.jpg", url: "#"},
-            {title: "Coming Soon...", image: "assets/cinnamonCruffins.jpg", url: "#"},
+        let recipes = [
+            {id:1, title: "Coming Soon...", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html", count:0},
+            {id:2, title: "Mooncake", image: "blogs/mooncake.png", url: "./blogs/mooncake.html", count:0},
+            {id:3,title: "Coming Soon...", image: "assets/coffeeCake.jpg", url: "#", count:0},
+            {id:4, title: "Coming Soon...", image: "assets/fluffyCoffeeBuns.jpg", url: "#", count:0},
+            {id:5, title: "Coming Soon...", image: "assets/cinnamonCruffins.jpg", url: "#", count:0},
         ];
 
         function recipeCard(recipe){
             return `
-                <div class='videos' '>
+                <div class="blogcard">
+                  <div class='videos'>
+                    
+                      
           <img 
             src = '${recipe.image}'  
             alt = 'Fluffy Buttery French Rolls'
             class="blogimg";
             >
            <p class="recipesText">  <a class="recipesText" href='${recipe.url}'>${recipe.title}</a> </p>
-        </div>
+          </div>
+          <div>
+            <button onclick="likePost(${recipe.id})"><img class="heart" src="hearts.png"></button>
+            <p>${recipe.count}</p>
+            </div>
+           </div>
             `;
+        }
+
+        function likePost(id){
+
+          const blog = recipes.find(item => item.id === id)
+          if (blog){
+            blog.count += 1;
+            recipes.map(item => item.id === id ? blog : item);
+            displayRecipes();
+
+          }
         }
         function displayRecipes(){
             const container = document.getElementById("recipecontainer");
@@ -71,6 +107,19 @@
 
         }
         displayRecipes();
+
+
+
+        var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navDiv").style.top = "0";
+  } else {
+    document.getElementById("navDiv").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
       </script>
 
 

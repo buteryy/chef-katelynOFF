@@ -7,12 +7,14 @@
       <title>replit</title>
       <link href="index.css" rel="stylesheet" type="text/css" />
 
-
-      <div class="navDiv">
+    </head>
+    
+<body>
+      <div id="navDiv"class="navDiv">
           <a href="https://chef-katelyn.com/index.html">
               <img class="navLogo" src="assets/navlogo.png">
           </a>
-          <nav style="margin-left: auto;">
+          <nav style="margin-left: auto; ">
               <ul style="text-align: right;">  
                   <li><a href="index.html">Home</a></li>
                   
@@ -39,9 +41,9 @@
           </nav>
       </div>
 
-    </head>
+ 
 
-<body>
+
     <div class="container" style="display: flex;">
         <div class="text" style="flex: 1; padding: 20px;">
             <p class="CHEFKATELYN">CHEF KATELYN</p>
@@ -156,6 +158,17 @@
   <br>Copyright &copy 2024 Chef Katelyn
   <footer>
   <script>
+    var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navDiv").style.top = "0";
+  } else {
+    document.getElementById("navDiv").style.top = "-200px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
 
     const form = document.getElementById('submit-form');
     const responseMessage = document.getElementById('response-message');
@@ -185,6 +198,10 @@
             console.error('Error:', error);
         });
     });
+
+
+
+    
   </script>
 
 

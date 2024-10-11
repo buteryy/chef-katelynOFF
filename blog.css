@@ -227,13 +227,12 @@
     width: 16vh;
   }
   .videos {
-    padding:1.5em;
+    
      margin-inline: 2em;
      text-align: center;
      display: flex;
      align-items: center;
-     background-color: rgb(255, 238, 240);
-     width: 65em;
+    
      gap: 2em;
    }
 
@@ -275,4 +274,17 @@
    .footerbutton:hover{
     background-color: #4d3e35;
     transform: scale(1.05);
+   }
+
+   .heart{
+    width: 25px;
+   }
+
+   .blogcard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 238, 240);
+    width: 65em;
+    padding:1.5em;
    }

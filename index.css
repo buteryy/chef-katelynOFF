@@ -13,10 +13,14 @@
 /* NAV div style*/
 .navDiv{
   background-color: #EFE5E9; 
-  padding-left: 3em; 
-  padding-right: 3em;
-  display: flex; 
   align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition:top 0.3s;
+  display: flex;
+  z-index: 1001;
 }
 
 
