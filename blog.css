@@ -264,28 +264,10 @@ footer{
   }
 
   /*BLOG*/
-  .recipesText{
-    font-family: "Playfair Display"; 
-    color:#7C695C;
-    text-decoration: underline;
-    font-size: 20px;
-    display:inline;
-    
-  }
+  
 
-  .blogimg{
-    display: inline;
-    width: 16vh;
-  }
-  .videos {
-    
-     margin-inline: 2em;
-     text-align: center;
-     display: flex;
-     align-items: center;
-    
-     gap: 2em;
-   }
+
+  
 
    .recentrecipes {
     align-items: center;
@@ -331,11 +313,42 @@ footer{
     width: 25px;
    }
 
-   .blogcard{
+   
+
+
+
+
+   .videos {
+    display: flex; /* Ensures the image and text are side by side */
+    align-items: flex-start; /* Aligns the image and text at the top */
+    gap: 2em; /* Adds space between the image and text */
+  }
+  
+  .blogimg {
+    width: 16vh;
+    margin: 0; /* Ensures the image stays aligned to the left */
+  }
+  
+  .recipesText {
+    font-family: "Playfair Display"; 
+    color: #7C695C;
+    text-decoration: underline;
+    font-size: 20px;
+    margin: 0; /* Removes extra margin */
+  }
+  
+  .recipeDescription {
+    font-family: 'Playfair Display';
+    font-size: 16px;
+    color: #4d3e35;
+    margin-top: 0.5em; /* Adds spacing between title and description */
+  }
+  
+  .blogcard {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     background-color: rgb(255, 238, 240);
     width: 65em;
-    padding:1.5em;
-   }
+    padding: 1.5em;
+  }
+  

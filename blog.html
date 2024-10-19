@@ -58,35 +58,39 @@
       </div>
       <script>
         let recipes = [
-            {id:1, title: "Coming Soon...", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html", count:0},
-            {id:2, title: "Mooncake", image: "assets/mooncake.png", url: "./blogs/mooncake.html", count:0},
-            {id:3,title: "Coming Soon...", image: "assets/coffeeCake.jpg", url: "#", count:0},
-            {id:4, title: "Coming Soon...", image: "assets/fluffyCoffeeBuns.jpg", url: "#", count:0},
-            {id:5, title: "Coming Soon...", image: "assets/cinnamonCruffins.jpg", url: "#", count:0},
+            {id:1, title: "Coming Soon...", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html", count:0, description:"A delicious traditional pastry with sweet or savory filling"},
+            {id:2, title: "Mooncake", image: "assets/mooncake.png", url: "./blogs/mooncake.html", count:0, description:"super delicious!"},
+            {id:3,title: "Coming Soon...", image: "assets/coffeeCake.jpg", url: "#", count:0, description:"super yummy!"},
+            {id:4, title: "Coming Soon...", image: "assets/fluffyCoffeeBuns.jpg", url: "#", count:0, description:"Msut try!"},
+            {id:5, title: "Coming Soon...", image: "assets/cinnamonCruffins.jpg", url: "#", count:0, description:"super simple!"},
         ];
 
-        function recipeCard(recipe){
-            return `
-                <div class="blogcard">
-                  <div class='videos'>
-                    
-                      
-          <img 
-            src = '${recipe.image}'  
-            alt = 'Fluffy Buttery French Rolls'
-            class="blogimg";
-            >
-           <p class="recipesText">  <a class="recipesText" href='${recipe.url}'>${recipe.title}</a> </p>
-           <br>
-           <p>hi</p>
-          </div>
-          <div>
-            <button onclick="likePost(${recipe.id})"><img class="heart" src="hearts.png"></button>
-            <p>${recipe.count}</p>
+        function recipeCard(recipe) {
+    return `
+        <div class="blogcard">
+            <div class='videos'>
+                <img 
+                    src='${recipe.image}'  
+                    alt='Fluffy Buttery French Rolls'
+                    class="blogimg"
+                >
+                <div>
+                    <p class="recipesText">  
+                        <a class="recipesText" href='${recipe.url}'>${recipe.title}</a> 
+                    </p>
+                    <p class="recipeDescription">${recipe.description}</p>
+                </div>
             </div>
-           </div>
-            `;
-        }
+            <div>
+                <button onclick="likePost(${recipe.id})">
+                    <img class="heart" src="hearts.png">
+                </button>
+                <p>${recipe.count}</p>
+            </div>
+        </div>
+    `;
+}
+
 
         function likePost(id){
 
