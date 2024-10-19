@@ -59,7 +59,7 @@
       <script>
         let recipes = [
             {id:1, title: "Coming Soon...", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html", count:0},
-            {id:2, title: "Mooncake", image: "blogs/mooncake.png", url: "./blogs/mooncake.html", count:0},
+            {id:2, title: "Mooncake", image: "assets/mooncake.png", url: "./blogs/mooncake.html", count:0},
             {id:3,title: "Coming Soon...", image: "assets/coffeeCake.jpg", url: "#", count:0},
             {id:4, title: "Coming Soon...", image: "assets/fluffyCoffeeBuns.jpg", url: "#", count:0},
             {id:5, title: "Coming Soon...", image: "assets/cinnamonCruffins.jpg", url: "#", count:0},
@@ -77,6 +77,8 @@
             class="blogimg";
             >
            <p class="recipesText">  <a class="recipesText" href='${recipe.url}'>${recipe.title}</a> </p>
+           <br>
+           <p>hi</p>
           </div>
           <div>
             <button onclick="likePost(${recipe.id})"><img class="heart" src="hearts.png"></button>

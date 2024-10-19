@@ -1,7 +1,10 @@
 
  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
  @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+ body{
+  margin:0;
 
+  }
 /* navlogo.png image design*/
 .navLogo{
   margin: 0; 
@@ -13,13 +16,14 @@
 /* NAV div style*/
 .navDiv{
   background-color: #EFE5E9; 
-  display: flex; 
   align-items: center;
-  position: fixed;
+  position: sticky;
   width: 100%;
-  z-index: 1001;
   top: 0;
   left: 0;
+  transition:top 0.3s ease;
+  display: flex;
+  z-index: 1001;
 }
 
 
