@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
  @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 
+ @import url('https://fonts.cdnfonts.com/css/dancing-script');
+
+
 /* navlogo.png image design*/
 .navLogo{
   margin: 0; 
@@ -155,17 +158,24 @@ footer{
 
 .blogdiv{
 
-  margin-bottom: 17em;
-  margin-right: 0; 
-  margin-left: 0;
+ margin-top: 7em;
+ margin-right: 20em;
+ margin-left: 20em;
   padding: 2em; 
   background-color: rgb(240, 248, 251);
 }
    .blogpic{
     width: 30em;
-  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 5px;
    }
 body{
   margin:0;
 
+  }
+  .blogtext{
+    font-size: 27px;
+    font-family: "Dancing Script";
   }
