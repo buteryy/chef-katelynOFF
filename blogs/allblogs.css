@@ -159,8 +159,8 @@ footer{
 .blogdiv{
 
  margin-top: 7em;
- margin-right: 20em;
- margin-left: 20em;
+ margin-right: 20%;
+ margin-left: 20%;
   padding: 2em; 
   background-color: rgb(240, 248, 251);
 }
@@ -175,7 +175,7 @@ body{
   margin:0;
 
   }
-  .blogtext{
-    font-size: 27px;
-    font-family: "Dancing Script";
-  }
+.blogtext{
+  font-size: 27px;
+  font-family: "Dancing Script";
+}

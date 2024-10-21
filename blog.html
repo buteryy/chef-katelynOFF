@@ -61,34 +61,37 @@
         let recipes = [
             {id:1, title: "October 6, 2024 - Mini Red Velvet Cupcakes for the community!", image: "assets/redvelvet.png", url: "./blogs/redvelvet.html", count:0, description:"Red velvet cupcakes for the community! "},
             {id:2, title: "September 14, 2024 - It's Mooncake Festival!", image: "assets/mooncake.png", url: "./blogs/mooncake.html", count:0, description:"super delicious!"},
-            {id:3,title: "March 24, 2024 - Coffee Cake Cookies for the community!", image: "assets/coffeecakecookies.png", url: "./blogs/coffeecakecookies.html", count:0, description:"super yummy!"},
             {id:4, title: "July 12, 2024 - Cooking Date!", image: "assets/chaicookies.png", url: "./blogs/chaicookies.html", count:0, description:"Msut try!"},
-            {id:5, title: "Coming Soon...", image: "asses/cinnamonCruffins.jpg", url: "#", count:0, description:"super simple!"},
+            {id:3,title: "March 24, 2024 - Coffee Cake Cookies for the community!", image: "assets/coffeecakecookies.png", url: "./blogs/coffeecakecookies.html", count:0, description:"super yummy!"},
+            
+            {id:5, title: "April 20, 2024-Mean Girls Cookies for the Musical tonight", image: "assets/meangirls.png", url: "#", count:0, description:"super simple!"},
+            {id:6, title: "Coming Soon...", image: "assets/applecrisps.png", url: "#", count:0, description:"super simple!"},
         ];
 
         function recipeCard(recipe) {
     return `
-        <div class="blogcard">
-            <div class='videos'>
-                <img 
-                    src='${recipe.image}'  
-                    alt='Fluffy Buttery French Rolls'
-                    class="blogimg"
-                >
-                <div>
-                    <p class="recipesText">  
-                        <a class="recipesText" href='${recipe.url}'>${recipe.title}</a> 
-                    </p>
-                    <p class="recipeDescription">${recipe.description}</p>
-                </div>
-            </div>
+    <a href="${recipe.url}" class="blogcard-link">
+    <div class="blogcard">
+        <div class='videos'>
+            <img 
+                src='${recipe.image}'  
+                alt='Fluffy Buttery French Rolls'
+                class="blogimg"
+            >
             <div>
-                <button onclick="likePost(${recipe.id})">
-                    <img class="heart" src="hearts.png">
-                </button>
-                <p>${recipe.count}</p>
+                <p class="recipesText">${recipe.title}</p> 
+                <p class="recipeDescription">${recipe.description}</p>
             </div>
         </div>
+        <div>
+            <button onclick="likePost(${recipe.id})">
+                <img class="heart" src="hearts.png">
+            </button>
+            <p>${recipe.count}</p>
+        </div>
+    </div>
+</a>
+
     `;
 }
 
