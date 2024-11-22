@@ -160,4 +160,6 @@ footer{
   display: flex;
   justify-content: center;
 }
-
+.musicHeader{
+  width: 50vw;
+}

@@ -13,6 +13,19 @@
   width: 27em;
 }
 
+.reciepe1 {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0
+}
+
+.show {
+  display: black;
+}
+
 /* NAV div style*/
 .navDiv{
   background-color: #EFE5E9; 
