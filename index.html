@@ -1,208 +1,249 @@
 <!DOCTYPE html>
-<html>
-
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <title>Chef-Katelyn</title>
-      <link href="index.css" rel="stylesheet" type="text/css" />
-      <link rel="icon" href="assets/">
-      
-    </head>
-    
-<body>
-      
-  <div id="navDiv"class="navDiv">
-    <a href="https://chef-katelyn.com/index.html">
-      <img class="navLogo" src="assets/navlogo.png">
-  </a>
-    <nav style="margin-left: auto; ">
-        <ul style="text-align: right;">  
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef-Katelyn</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="assets/favicon.ico" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <div id="navDiv" class="navDiv">
+        <a href="https://chef-katelyn.com/index.html">
+          <img
+            class="navLogo"
+            src="assets/navlogo.png"
+            alt="Chef Katelyn Logo"
+          />
+        </a>
+        <nav style="margin-left: auto">
+          <ul style="text-align: right">
             <li><a href="index.html">Home</a></li>
-            
-            
-            <div class="dropdown">
-              
-              <li><a href="recipes.html">Recipes</a></li>
+            <li class="dropdown">
+              <a href="recipes.html">Recipes</a>
               <div class="dropdown-content">
-                <ul class= dropdownRecipes>
-                  
-                  <li class="dropdownItems"><a href="recipes.html">Jellycat Collection</a></li>
-                  <li class="dropdownItems"><a href="recipes.html">Deserts</a></li>
-                  <li class="dropdownItems"><a href="recipes.html">Breads</a></li>
-                  <li class="dropdownItems"><a href="recipes.html">Cooking</a></li>
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Jellycat Collection</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Desserts</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Breads</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Cooking</a>
+                  </li>
                 </ul>
-
               </div>
-            </div>
-            
-            
+            </li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="music.html">Music</a></li>
-        </ul>
-    </nav>
-</div>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-
-
-    <div class="container" style="display: flex;">
-        <div class="text" style="flex: 1; padding: 20px;">
-            <p class="CHEFKATELYN">CHEF KATELYN</p>
-          <a href="https://www.instagram.com/chefkbakes/"><img class="instaLogo" src="assets/igLogo.png"></a>
-            <a href="https://www.youtube.com/@ChefKatelyn"><img class="instaLogo" src="assets/YT.jpg"></a>
-            <p class="aboutMe">
-                 I'm Katelyn, I am a highschooler who has a strong passion for baking and cooking. Last summer, I took my passion to the next level and started a Youtube Channel, Chef Katelyn! I've also incorporated some of my other interests as my cooking videos contain my covers of some of my favorite songs in the background. As well, I have used my web dev skills to create this website. I hope you enjoy my recipes and music! **
-            </p>
-        </div>
-        <div class="jellycatDiv" style="flex: 1; margin: 0; padding: 0;">
-            <img class="jellycatCake" src="assets/jellycatCake.jpg" alt="Jellycat Cake" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-    </div>
-
-
-  
-  
-  <!-- Chef Katelyn's Favorites -->
-  <p style=" margin-top:3em; text-align: center;" class="headerFont">Chef Katelyn's <b><i>Favorites</i></b></p>
-
-  <div style="display: flex; justify-content: center; gap: 10px; padding-bottom: 10em;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q4RdQjjM_tk?si=jjZBi6RfI39AMfef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/v80lbJv0LRs?si=i2ma6dMM7Dy9x03X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-
-
-  
-
-  
-
-<div style="display: flex; align-items: center; justify-content: center;">
-    <div class="carousel-container" >
-          <p class="headerFont">Recipes</p>
-          <div class="carousel">
-            <button class="prev">&#8249;</button>
-            <div class="carousel-inner">
-              <!-- First 3 carousel items -->
-              <div class="carousel-item">
-                <img src="assets/jellycatCakeYT.jpg" alt="Recipe 1">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/checkerboardCookiesYT.png" alt="Recipe 2">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/coffeeCake.jpg" alt="Recipe 3">
-              </div>
-              <!-- Next 3 carousel items -->
-              <div class="carousel-item">
-                <img src="assets/cinnamonCruffins.jpg" alt="Recipe 4">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/peititFrenchRolls.jpg" alt="Recipe 5">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/fluffyCoffeeBuns.jpg" alt="Recipe 6">
-              </div>
-            </div>
-            <button class="next">&#8250;</button>
-          </div>
-          <button class="view-more">View More</button>
-        </div>
+    <!-- About Section -->
+    <div class="container" style="display: flex">
+      <div class="text" style="flex: 1; padding: 20px">
+        <p class="CHEFKATELYN">CHEF KATELYN</p>
+        <a href="https://www.instagram.com/chefkbakes/">
+          <img class="instaLogo" src="assets/igLogo.png" alt="Instagram" />
+        </a>
+        <a href="https://www.youtube.com/@ChefKatelyn">
+          <img class="instaLogo" src="assets/YT.jpg" alt="YouTube" />
+        </a>
+        <p class="aboutMe">
+          I'm Katelyn, a high schooler with a strong passion for baking and
+          cooking. Last summer, I started a YouTube channel, Chef Katelyn! My
+          videos feature my favorite recipes along with covers of my favorite
+          songs. I also created this website to share my journey. Enjoy my
+          recipes and music!
+        </p>
+      </div>
+      <div class="jellycatDiv" style="flex: 1; margin: 0; padding: 0">
+        <img
+          class="jellycatCake"
+          src="assets/jellycatCake.jpg"
+          alt="Jellycat Cake"
+          style="width: 100%; height: 100%; object-fit: cover"
+        />
       </div>
     </div>
-      <script type="module" src="script.js"></script>
 
-
-
-
-
-
-
-
-<div style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 10em; margin-bottom: 10em;">
-  
-  <div style="width: 25%;">
-    <p style="font-size: 1.5em; text-align: center;" class="headerFont">Recipe Suggestions! If you want to see something that I haven't made, suggest it below!</p>
-    <form style="width: 100%;" method="post" action="https://formspree.io/f/xgvezvyl"> 
-      <div class="form-group">
-      <label class="form-font" for="name">Name:</label>
-      <input class="box-control" type="text" id="name" name="name">
+    <!-- Favorites Section -->
+    <p style="margin-top: 3em; text-align: center" class="headerFont">
+      Chef Katelyn's <b><i>Favorites</i></b>
+    </p>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding-bottom: 10em;
+      "
+    >
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Q4RdQjjM_tk"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/v80lbJv0LRs"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
-    <div class="form-group">
-      <label class="form-font" for="email">Email:</label>
-      <input class="box-control" type="email" id="email" name="email">
-    </div>
-    <div class="form-group">
-      <label class="form-font" for="message">Suggestions:</label>
-      <textarea class="box-control" id="message" name="message"></textarea>
-    </div>
-      <button style="background-color:#fab4bc ;" class="view-more" type="submit">Submit</button>
-    </form>
-  
-    <p id="response-message"></p>
-  </div>
-  <div>
-<img style="height: 30vw;" src="assets/jellycatForm.png">
-  </div>
-</div>
 
-<footer>
-<p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Website Directory:</p>
-<a href="index.html"><button class="footerbutton">Home</button></a>
- <a href="recipes.html"> <button class="footerbutton">Recipes</button></a>
- <a href="blog.html"><button class="footerbutton">Blog</button></a>
- <a href="music.html"><button class="footerbutton">Music</button></a>
-  <br> 
-  <div style="justify-content: center;">
-    <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Socials:</p>
-  <a href="https://www.instagram.com/chefkbakes/"><img style=" width: 6vh;" src="assets/igLogo.png"></a>
-            <a href="https://www.youtube.com/@ChefKatelyn"><img style=" margin-top:0; width: 7vh; mix-blend-mode: multiply;" src="assets/ytt.png"></a>
+    <!-- Recipes Carousel -->
+    <div style="display: flex; align-items: center; justify-content: center">
+      <div class="carousel-container">
+        <p class="headerFont">Recipes</p>
+        <div class="carousel">
+          <button class="prev">&#8249;</button>
+          <div class="carousel-inner">
+            <div class="carousel-item">
+              <img src="assets/jellycatCakeYT.jpg" alt="Jellycat Cake Recipe" />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/checkerboardCookiesYT.png"
+                alt="Checkerboard Cookies Recipe"
+              />
+            </div>
+            <div class="carousel-item">
+              <img src="assets/coffeeCake.jpg" alt="Coffee Cake Recipe" />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/cinnamonCruffins.jpg"
+                alt="Cinnamon Cruffins Recipe"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/peititFrenchRolls.jpg"
+                alt="Petit French Rolls Recipe"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/fluffyCoffeeBuns.jpg"
+                alt="Fluffy Coffee Buns Recipe"
+              />
+            </div>
           </div>
-  <br>Copyright &copy 2024 Chef Katelyn
-  <footer>
-  <script>
+          <button class="next">&#8250;</button>
+        </div>
+        <button class="view-more">View More</button>
+      </div>
+    </div>
 
+    <!-- Suggestion Form -->
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 10em;
+        margin-bottom: 10em;
+      "
+    >
+      <div style="width: 25%">
+        <p style="font-size: 1.5em; text-align: center" class="headerFont">
+          Recipe Suggestions! Suggest your ideas below!
+        </p>
+        <form
+          style="width: 100%"
+          method="post"
+          action="https://formspree.io/f/xgvezvyl"
+        >
+          <div class="form-group">
+            <label class="form-font" for="name">Name:</label>
+            <input
+              class="box-control"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-font" for="email">Email:</label>
+            <input
+              class="box-control"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-font" for="message">Suggestions:</label>
+            <textarea
+              class="box-control"
+              id="message"
+              name="message"
+              required
+            ></textarea>
+          </div>
+          <button
+            style="background-color: #fab4bc"
+            class="view-more"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+        <p id="response-message"></p>
+      </div>
+      <div>
+        <img
+          style="height: 30vw"
+          src="assets/jellycatForm.png"
+          alt="Form Illustration"
+        />
+      </div>
+    </div>
 
+    <!-- Footer -->
+    <footer>
+      <p style="font-size: 1.2em; margin-bottom: 0" class="headerFont">
+        Website Directory:
+      </p>
+      <div style="display: flex; justify-content: center">
+        <a href="index.html"><button class="footerbutton">Home</button></a>
+        <a href="recipes.html"><button class="footerbutton">Recipes</button></a>
+        <a href="blog.html"><button class="footerbutton">Blog</button></a>
+        <a href="music.html"><button class="footerbutton">Music</button></a>
+      </div>
+      <div style="justify-content: center">
+        <p style="font-size: 1.2em; margin-bottom: 0" class="headerFont">
+          Socials:
+        </p>
+        <a href="https://www.instagram.com/chefkbakes/"
+          ><img style="width: 6vh" src="assets/igLogo.png" alt="Instagram"
+        /></a>
+        <a href="https://www.youtube.com/@ChefKatelyn"
+          ><img style="width: 7vh" src="assets/ytt.png" alt="YouTube"
+        /></a>
+      </div>
+      <p>&copy; 2024 Chef Katelyn</p>
+    </footer>
 
-    const form = document.getElementById('submit-form');
-    const responseMessage = document.getElementById('response-message');
-
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-
-        const formData = new URLSearchParams();
-        formData.append('name', form.name.value);
-        formData.append('email', form.email.value);
-        formData.append('message', form.message.value);
-
-        fetch(scriptURL, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            responseMessage.innerHTML = 'Form Submitted Successfully!';
-            form.reset();
-        })
-        .catch(error => {
-            responseMessage.innerHTML = 'Error Submitting Form. Please try again.';
-            console.error('Error:', error);
-        });
-    });
-
-
-
-    
-  </script>
-
-
-  
-</body>
-
-
-
-
-  
+    <!-- JavaScript -->
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
