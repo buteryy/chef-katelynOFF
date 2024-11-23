@@ -53,7 +53,22 @@
       }
 
       .gallery-img {
-        max-width: 400px;
+        max-width: 350px;
+      }
+
+      .recipesText {
+        text-align: center;
+        text-decoration: none;
+        transition: scale 300ms ease-in-out;
+
+        &:hover {
+          scale: 1.1;
+        }
+      }
+
+      .reciepe-link {
+        color: #333;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -84,9 +99,7 @@
 
     <div class="search-container">
       <input class="box-control" type="search" id="search" />
-      <button onclick="searchRecipes()" class="footerbutton" id="searchbutton">
-        Search
-      </button>
+      <button class="footerbutton" id="searchbutton">Search</button>
     </div>
     <div id="recipecontainer" class="recentrecipes"></div>
 
@@ -116,9 +129,6 @@
     </footer>
 
     <script>
-      console.log("test")
-
-      // Script for modal and backdrop
       document.addEventListener("DOMContentLoaded", () => {
         const backdrop = document.querySelector(".backdrop")
         const modal = document.querySelector(".modal")
@@ -127,17 +137,7 @@
         const modalImg = document.querySelector(".modal-img")
         const imgContainer = document.getElementById("recipecontainer")
 
-        // const images = [
-        //   {id: 1, url: "https://picsum.photos/200/150"},
-        //   {id: 2, url: "https://picsum.photos/200/151"},
-        //   {id: 3, url: "https://picsum.photos/200/152"},
-        //   {id: 4, url: "https://picsum.photos/200/153"},
-        //   {id: 5, url: "https://picsum.photos/200/154"},
-        //   {id: 6, url: "https://picsum.photos/200/155"},
-        //   {id: 7, url: "https://picsum.photos/200/156"},
-        //   {id: 8, url: "https://picsum.photos/200/157"},
-        // ]
-        const images = [
+        const recipes = [
           {
             id: 1,
             title: "Jellycat Cake | Simple 4' inch Vanilla Cake",
@@ -176,22 +176,32 @@
           },
         ]
 
-        function getImages(images) {
-          return images
+        function getImages(recipes) {
+          return recipes
             .map(
-              (img) =>
-                `<img class="gallery-img" src=${img.image} data-id=${img.id} alt="random img" />`
+              (recipe) =>
+                `
+                  <div>
+                   <img class="gallery-img" src=${recipe.image} data-id=${recipe.id} alt=${recipe.title} />
+                   <p class="recipesText"> <a class="reciepe-link" href=${recipe.url}>${recipe.title}</a></p>  
+                  </div>
+                `
             )
             .join("")
         }
 
-        imgContainer.innerHTML = getImages(images)
+        imgContainer.innerHTML = getImages(recipes)
 
         document.addEventListener("click", (e) => {
           if (e.target.matches(".gallery-img")) {
             backdrop.style.display = "block"
             modal.style.display = "block"
-            modalHeading.textContent = `image with id: ${e.target.dataset.id} is selected.`
+
+            // find the title of the modal
+            const modalTitle = recipes.find(
+              (recipe) => recipe.id == e.target.dataset.id
+            ).title
+            modalHeading.textContent = modalTitle
             modalImg.src = e.target.src
           }
 
@@ -199,70 +209,19 @@
             backdrop.style.display = "none"
             modal.style.display = "none"
           }
+
+          if (e.target.matches("#searchbutton")) {
+            console.log(e.target)
+            // filter the recipes
+            const query = document.getElementById("search").value.toLowerCase()
+            const container = document.getElementById("recipecontainer")
+            const filteredRecipes = recipes.filter((item) =>
+              item.title.toLowerCase().includes(query)
+            )
+            container.innerHTML = getImages(filteredRecipes)
+          }
         })
       })
-
-      //
-
-      const recipes = [
-        {
-          title: "Jellycat Cake | Simple 4' inch Vanilla Cake",
-          image: "assets/jellycatCakeYT.jpg",
-          url: "./recipes/jellycatCake.html",
-        },
-        {
-          title: "Checkerboard Cookies",
-          image: "assets/checkerboardCookiesYT.png",
-          url: "./recipes/checkerboardCookies.html",
-        },
-        {
-          title: "Buttery Soft Coffee Cake",
-          image: "assets/coffeeCake.jpg",
-          url: "./recipes/coffeeCake.html",
-        },
-        {
-          title: "Fluffy Coffee Buns",
-          image: "assets/fluffyCoffeeBuns.jpg",
-          url: "./recipes/coffeeBuns.html",
-        },
-        {
-          title: "Cinnamon Cruffins",
-          image: "assets/cinnamonCruffins.jpg",
-          url: "./recipes/cinnamonCruffins.html",
-        },
-        {
-          title: "Petit French Rolls | Beginner Friendly",
-          image: "assets/peititFrenchRolls.jpg",
-          url: "./recipes/frenchRolls.html",
-        },
-      ]
-
-      function recipeCard(recipe) {
-        return `
-                  <a href='${recipe.url}'>
-                    <div class='videos' style= 'background-color:#ECE3D6;'>
-            <img 
-              src = '${recipe.image}'  
-              alt = 'Fluffy Buttery French Rolls'
-              class = "comingsoon2" 
-              style = "width:18vw">
-             <p class="recipesText">  ${recipe.title} </p>
-          </div> </a>
-              `
-      }
-      function displayRecipes() {
-        const container = document.getElementById("recipecontainer")
-        container.innerHTML = recipes.map(recipeCard).join("")
-      }
-      function searchRecipes() {
-        const queery = document.getElementById("search").value.toLowerCase()
-        const container = document.getElementById("recipecontainer")
-        container.innerHTML = recipes
-          .filter((item) => item.title.toLowerCase().includes(queery))
-          .map(recipeCard)
-          .join("")
-      }
-      displayRecipes()
     </script>
   </body>
 </html>
