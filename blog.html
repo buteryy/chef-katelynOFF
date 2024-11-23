@@ -1,153 +1,80 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Chef Katelyn-Blog</title>
-  <link href="blog.css" rel="stylesheet" type="text/css" />
-
-
-  <div class="navDiv">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef Katelyn - Blog</title>
+    <link href="blog.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header id="navDiv" class="navDiv">
       <a href="https://chef-katelyn.com/index.html">
-          <img class="navLogo" src="assets/navlogo.png">
+        <img class="navLogo" src="assets/navlogo.png" alt="Chef Katelyn Logo" />
       </a>
-      <nav style="margin-left: auto;">
-          <ul style="text-align: right;">  
-              <li><a href="index.html">Home</a></li>
-              <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="blog.html">Blog</a></li>
-              <li><a href="music.html">Music</a></li>
-          </ul>
+      <nav style="margin-left: auto">
+        <ul style="text-align: right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="music.html">Music</a></li>
+        </ul>
       </nav>
-  </div>
+    </header>
 
-
-
-
-</head>
-<body>
-
-
-
-
-
-  <div style="display: flex; justify-content: center;">
-    <a href="./blogs/coffeecakecookies.html">
-  <div class="recentblog">
-    <img style="width: 40vh;" src="assets/coolingrack.png">
-    
-
-  </div>
-</a>
-</div>
-
-
-
-
-
-
-
-
-<div class="search-container">
-  <input class="box-control" type="search" id="search">
-  <button onclick="searchRecipes()" class="footerbutton" id="searchbutton">Search</button>
-
-</div>
-
-
-
-      <div id="recipecontainer" class="recentrecipes">
-
+    <main>
+      <div style="display: flex; justify-content: center">
+        <a href="./blogs/coffeecakecookies.html">
+          <div class="recentblog">
+            <img
+              style="width: 40vh"
+              src="assets/coolingrack.png"
+              alt="Coffee Cake Cookies"
+            />
+          </div>
+        </a>
       </div>
-      <script>
-        let recipes = [
-            {id:1, title: "October 6, 2024 - Mini Red Velvet Cupcakes for the community!", image: "assets/redvelvet.png", url: "./blogs/redvelvet.html", count:0, description:""},
-            {id:2, title: "September 14, 2024 - It's Mooncake Festival!", image: "assets/mooncake.png", url: "./blogs/mooncake.html", count:0, description:""},
-            {id:4, title: "July 12, 2024 - Cooking Date!", image: "assets/chaicookies.png", url: "./blogs/chaicookies.html", count:0, description:""},
-            
-            
-            {id:5, title: "April 20, 2024-Mean Girls Cookies for the Musical tonight", image: "assets/meangirls.png", url: "./blogs/meangirls.html", count:0, description:""},
-            
-            {id:7, title: "April 7, 2024 - Everyone Loves my Meringue Cookies!", image: "assets/meringues.png", url: "./blogs/meringues.html", count:0, description:""},
-            {id:3,title: "March 24, 2024 - Coffee Cake Cookies for the community!", image: "assets/coffeecakecookies.png", url: "./blogs/coffeecakecookies.html", count:0, description:""},
-            {id:6, title: "March 23, 2024 - Bake together for some Family Fun", image: "assets/cinnamonapple.png", url: "./blogs/applecrisps.html", count:0, description:""},
-          ];
 
-        function recipeCard(recipe) {
-    return `
-    <a href="${recipe.url}" class="blogcard-link">
-    <div class="blogcard">
-        <div class='videos'>
-            <img 
-                src='${recipe.image}'  
-                alt='Fluffy Buttery French Rolls'
-                class="blogimg"
-            >
-            <div>
-                <p class="recipesText">${recipe.title}</p> 
-                <p class="recipeDescription">${recipe.description}</p>
-            </div>
-        </div>
-        <div>
-            <button onclick="likePost(${recipe.id})">
-                <img class="heart" src="hearts.png">
-            </button>
-            <p>${recipe.count}</p>
-        </div>
-    </div>
-</a>
+      <div class="search-container">
+        <input
+          class="box-control"
+          type="search"
+          id="search"
+          placeholder="Search recipes"
+        />
+        <button class="footerbutton" id="recipeSearchButton">Search</button>
+      </div>
 
-    `;
-}
+      <div id="recipecontainer" class="recentrecipes"></div>
+    </main>
 
-
-        function likePost(id){
-
-          const blog = recipes.find(item => item.id === id)
-          if (blog){
-            blog.count += 1;
-            recipes.map(item => item.id === id ? blog : item);
-            displayRecipes();
-
-          }
-        }
-        function displayRecipes(){
-            const container = document.getElementById("recipecontainer");
-            container.innerHTML = recipes.map(recipeCard).join("");
-        }
-        function searchRecipes(){
-          const queery = document.getElementById("search").value.toLowerCase();
-          const container = document.getElementById("recipecontainer");
-          container.innerHTML = recipes.filter(item => item.title.toLowerCase().includes(queery)).map(recipeCard).join("");
-
-        }
-        displayRecipes();
-
-
-
-        var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navDiv").style.top = "0";
-  } else {
-    document.getElementById("navDiv").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
-      </script>
-
-
-<footer>
-  <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Website Directory:</p>
-  <a href="index.html"><button class="footerbutton">Home</button></a>
-   <a href="recipes.html"> <button class="footerbutton">Recipes</button></a>
-   <a href="blog.html"><button class="footerbutton">Blog</button></a>
-   <a href="music.html"><button class="footerbutton">Music</button></a>
-    <br> 
-    <div style="justify-content: center;">
-      <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Socials:</p>
-    <a href="https://www.instagram.com/chefkbakes/"><img style=" width: 6vh;" src="assets/igLogo.png"></a>
-              <a href="https://www.youtube.com/@ChefKatelyn"><img style=" margin-top:0; width: 7vh; mix-blend-mode: multiply;" src="assets/ytt.png"></a>
-            </div>
-    <br>Copyright &copy 2024 Chef Katelyn
     <footer>
-</body>
+      <p class="headerFont" style="font-size: 1.2em; margin-bottom: 0">
+        Website Directory:
+      </p>
+      <a href="index.html"><button class="footerbutton">Home</button></a>
+      <a href="recipes.html"><button class="footerbutton">Recipes</button></a>
+      <a href="blog.html"><button class="footerbutton">Blog</button></a>
+      <a href="music.html"><button class="footerbutton">Music</button></a>
+      <br />
+      <div style="justify-content: center">
+        <p class="headerFont" style="font-size: 1.2em; margin-bottom: 0">
+          Socials:
+        </p>
+        <a href="https://www.instagram.com/chefkbakes/">
+          <img style="width: 6vh" src="assets/igLogo.png" alt="Instagram" />
+        </a>
+        <a href="https://www.youtube.com/@ChefKatelyn">
+          <img
+            style="width: 7vh; mix-blend-mode: multiply"
+            src="assets/ytt.png"
+            alt="YouTube"
+          />
+        </a>
+      </div>
+      <br />
+      <p>Copyright &copy; 2024 Chef Katelyn</p>
+    </footer>
+
+    <script type="module" src="blog.js"></script>
+  </body>
+</html>
