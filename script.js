@@ -1,10 +1,8 @@
-const prevButton = document.querySelector(".prev")
-const nextButton = document.querySelector(".next")
 const carouselInner = document.querySelector(".carousel-inner")
 const carouselItems = document.querySelectorAll(".carousel-item")
 const totalItems = carouselItems.length
 
-let index = 0
+let index = 0 // carousel index
 
 // Dynamically calculate the number of items visible at once
 const getVisibleItemsCount = () => {
@@ -13,28 +11,29 @@ const getVisibleItemsCount = () => {
   return Math.floor(carouselWidth / itemWidth)
 }
 
-// Event listener for the next button click
-nextButton.addEventListener("click", () => {
-  const visibleItems = getVisibleItemsCount()
-  if (index < totalItems - visibleItems) {
-    index++
-  } else {
-    index = 0 // Reset to the beginning
+document.addEventListener("click", (e) => {
+  // Event listener for the next button click
+  if (e.target.matches(".next")) {
+    const visibleItems = getVisibleItemsCount()
+    if (index < totalItems - visibleItems) {
+      index++
+    } else {
+      index = 0 // Reset to the beginning
+    }
+    carouselInner.style.transform = `translateX(-${
+      (index * 100) / visibleItems
+    }%)`
   }
-  carouselInner.style.transform = `translateX(-${
-    (index * 100) / visibleItems
-  }%)`
-})
 
-// Event listener for the previous button click
-prevButton.addEventListener("click", () => {
-  const visibleItems = getVisibleItemsCount()
-  if (index > 0) {
-    index--
-  } else {
-    index = totalItems - visibleItems // Reset to the end
+  if (e.target.matches(".prev")) {
+    const visibleItems = getVisibleItemsCount()
+    if (index > 0) {
+      index--
+    } else {
+      index = totalItems - visibleItems // Reset to the end
+    }
+    carouselInner.style.transform = `translateX(-${
+      (index * 100) / visibleItems
+    }%)`
   }
-  carouselInner.style.transform = `translateX(-${
-    (index * 100) / visibleItems
-  }%)`
 })
