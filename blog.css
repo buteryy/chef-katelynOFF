@@ -11,6 +11,27 @@ body {
   width: 27em;
 }
 
+.like-btn {
+  background-color: lightpink;
+  border: none;
+  font-size: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+.like-btn:hover {
+  scale: 1.3;
+}
+.like-btn:active {
+  background-color: hotpink;
+}
+
+/* HIDING THE COUNTER */
+.like-count {
+  display: none;
+}
+
 /* NAV div style*/
 .navDiv {
   background-color: #efe5e9;

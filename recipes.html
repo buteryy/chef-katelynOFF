@@ -54,17 +54,29 @@
 
       .gallery-img {
         max-width: 350px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .gallery-img:hover{
+        scale: 1.5;
+        rotate: 10deg;
+      }
+
+      .gallery-img:active {
+        scale: 0.7;
       }
 
       .recipesText {
         text-align: center;
         text-decoration: none;
         transition: scale 300ms ease-in-out;
-
-        &:hover {
-          scale: 1.1;
-        }
       }
+
+      .recipesText:hover {
+        scale: 1.2;
+      }
+
+
 
       .reciepe-link {
         color: #333;

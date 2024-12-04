@@ -1,3 +1,5 @@
+const jsConfetti = new JSConfetti()
+
 // Recipe data
 const recipes = [
   {
@@ -72,7 +74,7 @@ function recipeCard(recipe) {
         </div>
         <div>
           <button class="like-btn" data-id="${recipe.id}">
-            <img class="heart" src="hearts.png" alt="Like">
+            ❤️
           </button>
           <p class="like-count" data-id="${recipe.id}">${recipe.count}</p>
         </div>
@@ -118,6 +120,10 @@ function searchRecipes() {
 // Event delegation for handling likes and other interactions
 document.addEventListener("click", (e) => {
   if (e.target.closest(".like-btn")) {
+    jsConfetti.addConfetti({
+      emojis: ['🌈', '🧋', '🍪', '🎂', '❤️', '🌸'],
+    })
+    e.preventDefault()
     const id = parseInt(e.target.closest(".like-btn").dataset.id, 10)
     likePost(id)
   }
