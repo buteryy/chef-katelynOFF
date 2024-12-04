@@ -84,11 +84,11 @@
 <div class="search-container">
   <input class="box-control" type="search" id="search">
   <button onclick="searchRecipes()" class="footerbutton" id="searchbutton">Search</button>
+</div>
+
+<div id="recipecontainer" class="recentrecipes">
 
 </div>
-      <div id="recipecontainer" class="recentrecipes">
-
-      </div>
       
 <footer>
   <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Website Directory:</p>
@@ -138,7 +138,25 @@
         ];
 
           function getImages(images) {
-            return images.map(img => `<img class="gallery-img" src=${img.image} data-id=${img.id} alt="random img" />`).join("") 
+            return images.map(img => {
+              return `
+                <div class='videos' style= 'background-color:#ECE3D6;'>
+                  <img class="gallery-img" src=${img.image} data-id=${img.id} alt=${img.title} style = "width:18vw"/>
+                   <p class="recipesText">  ${recipe.title} </p>
+                </div>
+              `
+
+        //       <a href='${recipe.url}'>
+        //           <div class='videos' style= 'background-color:#ECE3D6;'>
+                //   <img 
+                //     src = '${recipe.image}'  
+                //     alt = 'Fluffy Buttery French Rolls'
+                //     class = "comingsoon2" 
+                //     style = "width:18vw">
+                //     <p class="recipesText">  ${recipe.title} </p>
+                  // </div> 
+              // </a>
+            }).join("") 
           }
 
           imgContainer.innerHTML = getImages(images)
@@ -162,13 +180,22 @@
 
 
 
+        // const recipes = [
+        //     {title: "Jellycat Cake | Simple 4' inch Vanilla Cake", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html"},
+        //     {title: "Checkerboard Cookies", image: "assets/checkerboardCookiesYT.png", url: "./recipes/checkerboardCookies.html"},
+        //     {title: "Buttery Soft Coffee Cake", image: "assets/coffeeCake.jpg", url: "./recipes/coffeeCake.html"},
+        //     {title: "Fluffy Coffee Buns", image: "assets/fluffyCoffeeBuns.jpg", url: "./recipes/coffeeBuns.html"},
+        //     {title: "Cinnamon Cruffins", image: "assets/cinnamonCruffins.jpg", url: "./recipes/cinnamonCruffins.html"},
+        //     {title: "Petit French Rolls | Beginner Friendly", image: "assets/peititFrenchRolls.jpg", url: "./recipes/frenchRolls.html"},
+        // ];
+
         const recipes = [
-            {title: "Jellycat Cake | Simple 4' inch Vanilla Cake", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html"},
-            {title: "Checkerboard Cookies", image: "assets/checkerboardCookiesYT.png", url: "./recipes/checkerboardCookies.html"},
-            {title: "Buttery Soft Coffee Cake", image: "assets/coffeeCake.jpg", url: "./recipes/coffeeCake.html"},
-            {title: "Fluffy Coffee Buns", image: "assets/fluffyCoffeeBuns.jpg", url: "./recipes/coffeeBuns.html"},
-            {title: "Cinnamon Cruffins", image: "assets/cinnamonCruffins.jpg", url: "./recipes/cinnamonCruffins.html"},
-            {title: "Petit French Rolls | Beginner Friendly", image: "assets/peititFrenchRolls.jpg", url: "./recipes/frenchRolls.html"},
+            {id: 1, title: "Jellycat Cake | Simple 4' inch Vanilla Cake", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html"},
+            {id: 2, title: "Checkerboard Cookies", image: "assets/checkerboardCookiesYT.png", url: "./recipes/checkerboardCookies.html"},
+            {id: 3, title: "Buttery Soft Coffee Cake", image: "assets/coffeeCake.jpg", url: "./recipes/coffeeCake.html"},
+            {id: 4, title: "Fluffy Coffee Buns", image: "assets/fluffyCoffeeBuns.jpg", url: "./recipes/coffeeBuns.html"},
+            {id: 5, title: "Cinnamon Cruffins", image: "assets/cinnamonCruffins.jpg", url: "./recipes/cinnamonCruffins.html"},
+            {id: 6, title: "Petit French Rolls | Beginner Friendly", image: "assets/peititFrenchRolls.jpg", url: "./recipes/frenchRolls.html"},
         ];
 
         function recipeCard(recipe){
@@ -181,7 +208,9 @@
             class = "comingsoon2" 
             style = "width:18vw">
            <p class="recipesText">  ${recipe.title} </p>
-        </div> </a>
+        </div> 
+        
+        </a>
             `;
         }
         function displayRecipes(){
