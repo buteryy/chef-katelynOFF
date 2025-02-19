@@ -59,7 +59,7 @@
 
       .gallery-img:hover{
         scale: 1.5;
-        rotate: 10deg;
+       
       }
 
       .gallery-img:active {
@@ -69,13 +69,19 @@
       .recipesText {
         text-align: center;
         text-decoration: none;
-        transition: scale 300ms ease-in-out;
+        transition: transform 300ms ease-in-out, color 300ms ease-in-out; /* Update property */
+        font-size: 20px;
       }
 
       .recipesText:hover {
-        scale: 1.2;
+        transform: scale(1.2); /* Use transform instead of scale property */
+        color: hotpink;
       }
 
+
+      /* .recipeCardLink:hover {
+        color: red;
+      } */
 
 
       .reciepe-link {
@@ -148,7 +154,7 @@
             </div>
     <br>Copyright &copy 2024 Chef Katelyn
 
-    <footer>
+    <!-- <footer>
       <p style="font-size: 1.2em; margin-bottom: 0" class="headerFont">
         Website Directory:
       </p>
@@ -171,7 +177,7 @@
         /></a>
       </div>
       <br />Copyright &copy 2024 Chef Katelyn
-    </footer>
+    </footer> -->
 
 
     <script type="module" src="recipes.js"></script>
@@ -180,7 +186,6 @@
 
 
       <script>
-        console.log("test")
 
         // Script for modal and backdrop
         document.addEventListener("DOMContentLoaded", () => { 
@@ -218,17 +223,6 @@
                    <p class="recipesText">  ${recipe.title} </p>
                 </div>
               `
-
-        //       <a href='${recipe.url}'>
-        //           <div class='videos' style= 'background-color:#ECE3D6;'>
-                //   <img 
-                //     src = '${recipe.image}'  
-                //     alt = 'Fluffy Buttery French Rolls'
-                //     class = "comingsoon2" 
-                //     style = "width:18vw">
-                //     <p class="recipesText">  ${recipe.title} </p>
-                  // </div> 
-              // </a>
             }).join("") 
           }
 
@@ -273,17 +267,16 @@
 
         function recipeCard(recipe){
             return `
-                <a href='${recipe.url}'>
+                <a href='${recipe.url}' class="recipeCardLink">
                   <div class='videos' style= 'background-color:#ECE3D6;'>
-          <img 
-            src = '${recipe.image}'  
-            alt = 'Fluffy Buttery French Rolls'
-            class = "comingsoon2" 
-            style = "width:18vw">
-           <p class="recipesText">  ${recipe.title} </p>
-        </div> 
-        
-        </a>
+                  <img 
+                    src = '${recipe.image}'  
+                    alt = 'Fluffy Buttery French Rolls'
+                    class = "comingsoon2" 
+                    style = "width:18vw">
+                  <p class="recipesText">  ${recipe.title} </p>
+                  </div> 
+                </a>
             `;
         }
         function displayRecipes(){

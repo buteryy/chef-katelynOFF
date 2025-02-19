@@ -184,12 +184,12 @@ li a:hover {
   width: 20vw;
 }
 
-.recipesText {
+/* .recipesText {
   font-family: "Playfair Display";
   color: #7c695c;
   text-decoration: underline;
   font-size: 20px;
-}
+} */
 
 .videos:hover {
   outline: 5px solid pink;
