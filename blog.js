@@ -3,6 +3,22 @@ const jsConfetti = new JSConfetti()
 // Recipe data
 const recipes = [
   {
+    id: 9,
+    title: "November 24th, 2025  - Almond Pudding",
+    image: "assets/2almondpudding.png",
+    url: "./blogs/2almondpudding.html",
+    count: 0,
+    description: "",
+  },
+  {
+    id: 8,
+    title: "October 19, 2024 - Sanrio Cookies",
+    image: "assets/1sanriocookies.png",
+    url: "./blogs/1sanriocookies.html",
+    count: 0,
+    description: "",
+  },
+  {
     id: 1,
     title: "October 6, 2024 - Mini Red Velvet Cupcakes for the community!",
     image: "assets/redvelvet.png",
@@ -15,14 +31,6 @@ const recipes = [
     title: "September 14, 2024 - It's Mooncake Festival!",
     image: "assets/mooncake.png",
     url: "./blogs/mooncake.html",
-    count: 0,
-    description: "",
-  },
-  {
-    id: 3,
-    title: "March 24, 2024 - Coffee Cake Cookies for the community!",
-    image: "assets/coffeecakecookies.png",
-    url: "./blogs/coffeecakecookies.html",
     count: 0,
     description: "",
   },
@@ -43,14 +51,6 @@ const recipes = [
     description: "",
   },
   {
-    id: 6,
-    title: "March 23, 2024 - Bake together for some Family Fun",
-    image: "assets/cinnamonapple.png",
-    url: "./blogs/applecrisps.html",
-    count: 0,
-    description: "",
-  },
-  {
     id: 7,
     title: "April 7, 2024 - Everyone Loves my Meringue Cookies!",
     image: "assets/meringues.png",
@@ -58,6 +58,28 @@ const recipes = [
     count: 0,
     description: "",
   },
+  {
+    id: 3,
+    title: "March 24, 2024 - Coffee Cake Cookies for the community!",
+    image: "assets/coffeecakecookies.png",
+    url: "./blogs/coffeecakecookies.html",
+    count: 0,
+    description: "",
+  },
+  
+  
+  {
+    id: 6,
+    title: "March 23, 2024 - Bake together for some Family Fun",
+    image: "assets/cinnamonapple.png",
+    url: "./blogs/applecrisps.html",
+    count: 0,
+    description: "",
+  },
+  
+  
+  
+  
 ]
 
 // Generate recipe card HTML
