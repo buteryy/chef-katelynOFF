@@ -328,5 +328,8 @@ footer {
   padding: 1.5em;
 }
 .blogtext{
-  font-family: Nunito !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
 }
