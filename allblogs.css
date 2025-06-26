@@ -56,7 +56,13 @@
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
 }
+#modalBlogContent {
+  padding: 2rem;
+}
 
+#modalBlogContent p {
+  font-size: 18px;
+}
 /* Styling for content inside the modal - re-using .blogdiv styles */
 #modalBlogContent .blogdiv {
     margin-top: 0; /* Remove top margin that pushes content down in modal */

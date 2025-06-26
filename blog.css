@@ -65,7 +65,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.header-nav {
+.header-nav { /* Not used in blog.html, but kept from your original for completeness */
   display: flex;
   align-items: center;
   background-color: white;
@@ -75,13 +75,7 @@ nav a:hover {
   overflow-y: scroll;
   vertical-align: middle;
 }
-/* nav{
-  position: fixed !important;
 
-  top: 0 !important;
-  width: 100% !important;
-  z-index: 1000 !important;
-} */
 ul {
   list-style-type: none;
   font-family: "Optima";
@@ -171,6 +165,7 @@ footer {
   width: 64em;
   margin: 2em;
 }
+
 /*SEARCH BAR*/
 .search-container {
   display: flex;
@@ -179,31 +174,12 @@ footer {
   margin: 1em;
   gap: 20px;
 }
-#recipeSearchButton {
+#recipeSearchButton { /* Renamed to #blogSearchButton in HTML and JS */
   margin: 0;
 }
 
 #search {
   padding: 20px;
-}
-
-.footerbutton {
-  margin-left: 1em;
-  margin-right: 1em;
-  background-color: #a6998e;
-  padding: 8px 20px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.3s;
-  font-family: "Playfair Display";
-}
-.footerbutton:hover {
-  background-color: #4d3e35;
-  transform: scale(1.05);
 }
 
 .box-control {
@@ -215,30 +191,30 @@ footer {
   color: #4d3e35;
 }
 
-/*RECENT RECIPES*/
+/*RECENT RECIPES / BLOG CARDS LISTING */
 
-.recipes {
+.recipes { /* This class seems to be from a previous recipe listing, might not be used here */
   padding: 0.5em;
   margin-inline: 1em;
   text-align: center;
 }
 
-.recipes img {
+.recipes img { /* Might apply to blog cards, but .blogimg is more specific */
   padding-bottom: 0.1em;
   width: 19vw;
 }
 
-.recipes p {
+.recipes p { /* Might apply to blog cards, but .recipesText is more specific */
   padding-inline: 1em;
   padding-top: 1.2em;
   font-size: 2em;
 }
 
-.frenchrolltextpic {
+.frenchrolltextpic { /* Not found in HTML, likely old */
   margin-bottom: 2em;
 }
 
-.copyright {
+.copyright { /* Not found in HTML, footer handles copyright */
   font-family: "Times New Roman";
   text-align: center;
   padding: 7em;
@@ -248,64 +224,38 @@ footer {
   outline: 5px solid pink;
 }
 
-.newrecipes {
+.newrecipes { /* Not used in blog.html, likely old */
   display: flex;
   flex-wrap: wrap;
   gap: 22px;
 }
 
-/*BLOG*/
+/*BLOG SPECIFIC STYLES FOR CARDS */
 
-.recentrecipes {
+.recentrecipes { /* This is the container for all blog cards */
   align-items: center;
   justify-content: center;
   gap: 2em;
-  flex-direction: column;
+  flex-direction: column; /* Stacks cards vertically */
   display: flex;
 }
 
-footer {
-  background-color: #efe5e9;
-  text-align: center;
-  padding-top: 2em;
-}
-
-.footerbutton {
-  margin-left: 1em;
-  margin-right: 1em;
-  background-color: #a6998e;
-  margin-top: 20px;
-  padding: 12px 24px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.3s;
-  font-family: "Playfair Display";
-}
-.footerbutton:hover {
-  background-color: #4d3e35;
-  transform: scale(1.05);
-}
-
-.heart {
+.heart { /* Not found in HTML, consider removing if not used */
   width: 25px;
 }
 
-.videos {
+.videos { /* Styles for the image and text layout within each blog card */
   display: flex; /* Ensures the image and text are side by side */
   align-items: flex-start; /* Aligns the image and text at the top */
   gap: 2em; /* Adds space between the image and text */
 }
 
-.blogimg {
+.blogimg { /* Styles for images within blog cards */
   width: 16vh;
   margin: 0; /* Ensures the image stays aligned to the left */
 }
 
-.recipesText {
+.recipesText { /* Styles for the title within blog cards */
   font-family: "Nunito";
   color: #7c695c;
   text-decoration: underline;
@@ -313,23 +263,26 @@ footer {
   margin: 0; /* Removes extra margin */
 }
 
-.recipeDescription {
+.recipeDescription { /* Styles for the description within blog cards */
   font-family: "Nunito";
   font-size: 16px;
   color: #4d3e35;
   margin-top: 0.5em; /* Adds spacing between title and description */
 }
 
-.blogcard {
+.blogcard { /* Styles for individual blog cards in the listing */
   display: flex;
   justify-content: space-between;
   background-color: rgb(255, 238, 240);
   width: 65em;
   padding: 1.5em;
 }
-.blogtext{
+/* This .blogtext is overridden by allblogs.css due to load order, consider consolidating */
+/*
+.blogtext{ 
   font-family: 'Open Sans', sans-serif !important;
   font-size: 0.95rem;
   line-height: 1.6;
   color: #333;
 }
+*/
