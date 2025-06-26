@@ -9,6 +9,7 @@ const recipes = [
     image: "assets/mothersday.jpeg",
     url: "./blogs/mothersday.html",
     bottomImage: "assets/mothersday1.jpeg",
+    bottomImage2: "assets/mothersday2.png", // new image next to it
     count: 0,
     description: "",
   },

@@ -17,7 +17,7 @@
   background-color: #EFE5E9; 
   align-items: center;
   position: sticky;
-  width: 100%;
+  width:100%;
   top: 0;
   left: 0;
   transition:top 0.3s ease;
@@ -174,8 +174,29 @@ footer{
 body{
   margin:0;
 
-  }
+  
 .blogtext{
   font-size: 27px;
   font-family: "Nunito";
 }
+
+.bottomImageRow {
+  display: flex;
+  gap: 0; /* no space between images */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px; /* optional for space under */
+}
+.bottomImageRow img {
+  width: 35%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px
+  margin: 0;
+  padding: 0;
+}
+.bottomImageRow img {
+  margin-bottom: 40px; /* or any value you like */
+}
+
