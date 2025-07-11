@@ -91,7 +91,7 @@
     </div>
 
     <!-- Favorites Section -->
-    <p style="margin-top: 3em; text-align: center" class="headerFont">
+    <!-- <p style="margin-top: 3em; text-align: center" class="headerFont">
       Chef Katelyn's <b><i>Favorites</i></b>
     </p>
     <div
@@ -120,8 +120,27 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-    </div>
+    </div> -->
 
+    <!-- video section -->
+  <section class="video-section">
+    <!-- video -->
+    <div>
+       <video class="video-section-video"  muted autoplay loop>
+        <source src="assets/liloVID.mp4" type="video/mp4">
+        <!-- <source src="movie.ogg" type="video/ogg"> -->
+        Your browser does not support the video tag.
+      </video> 
+    </div>
+    <!-- text -->
+    <div class="video-section-text-container">
+      <h1>Lilo & Stitch Meringues</h1>
+      <p>In honor of the new Lilo & Stitch live-action movie, I whipped up these adorable meringues inspired by everyone’s favorite blue alien! These light, airy treats are crisp on the outside, soft on the inside are Perfect for all ages who want something sweet to snack on while watching this Disney classic.</p>
+      <img src="assets/lilo.gif">
+      <p>Click below to view the recipe:</p>
+      <button id="video-section-img" class="view-more">View</button>
+    </div>
+  </section>
    
     <!-- Suggestion Form -->
     <div
@@ -214,6 +233,19 @@
       </div>
       <p>&copy; 2024 Chef Katelyn</p>
     </footer>
+    
+    <!-- video section modal -->
+
+    <!-- <div class="video-section-modal">
+      <img src="assets/applecrisps.png" alt="">
+      <button>X</button>
+    </div> -->
+
+  <div id="myModal" class="modal">
+    <span class="close">×</span>
+    <img class="modal-content" id="modalImg" src="recipecard/LiloCARD.jpg">
+  </div>
+
 
     <!-- JavaScript -->
     <script type="module" src="script.js"></script>
