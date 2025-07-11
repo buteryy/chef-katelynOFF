@@ -1,296 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Chef Katelyn-Recipes</title>
-    <link href="recipes.css" rel="stylesheet" type="text/css" />
-    <style>
-      .navDiv {
-        position: sticky;
-        top: 0;
-        z-index: 5;
-      }
-      .backdrop {
-        display: none;
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.7);
-        z-index: 9;
-      }
 
-      .modal {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        padding: 10px;
-        width: 90vw;
-        height: 90vh;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chef Katelyn-Recipes</title>
+  <link href="recipes.css" rel="stylesheet" type="text/css" />
+</head>
 
-      .modal-img {
-        width: 100%;
-        height: 80%;
-      }
-
-      .modal-close-btn {
-        position: absolute;
-        top: 20px;
-        right: 9px;
-        cursor: pointer;
-      }
-
-      #recipecontainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .gallery-img {
-        max-width: 350px;
-        transition: all 0.3s ease-in-out;
-      }
-
-      .gallery-img:hover{
-        scale: 1.5;
-       
-      }
-
-      .gallery-img:active {
-        scale: 0.7;
-      }
-
-      .recipesText {
-        text-align: center;
-        text-decoration: none;
-        transition: transform 300ms ease-in-out, color 300ms ease-in-out; /* Update property */
-        font-size: 20px;
-      }
-
-      .recipesText:hover {
-        transform: scale(1.2); /* Use transform instead of scale property */
-        color: hotpink;
-      }
-
-
-      /* .recipeCardLink:hover {
-        color: red;
-      } */
-
-
-      .reciepe-link {
-        color: #333;
-        text-decoration: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="navDiv">
-      <a href="https://chef-katelyn.com/index.html">
-        <img class="navLogo" src="assets/navlogo.png" />
-      </a>
-      <nav style="margin-left: auto">
-        <ul style="text-align: right">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="music.html">Music</a></li>
-        </ul>
-      </nav>
-    </div>
-    <p class="headerFont"><i>Recipes</i></p>
-
-    <!-- backdrop and modal, initially they are hidden -->
-    <div class="backdrop"></div>
-    <div class="modal">
-      <h1>this is a model</h1>
-      <img class="modal-img" src="https://placehold.co/200x150" alt="" /> <br />
-      <button class="modal-close-btn">X</button>
-    </div>
-    <!--  -->
-
-    <div class="search-container">
-      <input class="box-control" type="search" id="search" />
-      <button class="footerbutton" id="searchbutton">Search</button>
-    </div>
-    <div id="recipecontainer" class="recentrecipes"></div>
-
-
-  <!-- backdrop and modal, initially they are hidden -->
-  <div class="backdrop"></div>
-  <div class="modal">
-    <h1>this is a model</h1>
-    <img class="modal-img" src="https://placehold.co/200x150" alt=""> <br>
-    <button class="modal-close-btn">X</button>
+<body>
+  <div class="navDiv">
+    <a href="https://chef-katelyn.com/index.html">
+      <img class="navLogo" src="assets/navlogo.png" />
+    </a>
+    <nav style="margin-left: auto">
+      <ul style="text-align: right">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="music.html">Music</a></li>
+      </ul>
+    </nav>
   </div>
-  <!--  -->
-   
-<div class="search-container">
-  <input class="box-control" type="search" id="search">
-  <button onclick="searchRecipes()" class="footerbutton" id="searchbutton">Search</button>
-</div>
+  <p class="headerFont"><i>Recipes</i></p>
 
-<div id="recipecontainer" class="recentrecipes">
+  <div class="search-container">
+    <input class="box-control" type="search" id="search" />
+    <button class="footerbutton" id="searchbutton">Search</button>
+  </div>
+  <div>
+    <h3 class="headerFont2">Sweets</h3>
+    <div id="recipecontainer" class="recentrecipes"></div>
+  </div>
+  <div>
+    <h3 class="headerFont2">Breads</h3>
+    <div id="recipecontainer2" class="recentrecipes"></div>
+  </div>
 
-</div>
-      
-<footer>
-  <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Website Directory:</p>
-  <a href="index.html"><button class="footerbutton">Home</button></a>
-   <a href="recipes.html"> <button class="footerbutton">Recipes</button></a>
-   <a href="blog.html"><button class="footerbutton">Blog</button></a>
-   <a href="music.html"><button class="footerbutton">Music</button></a>
-    <br> 
+  <footer>
+    <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Website Directory:</p>
+    <a href="index.html"><button class="footerbutton">Home</button></a>
+    <a href="recipes.html"> <button class="footerbutton">Recipes</button></a>
+    <a href="blog.html"><button class="footerbutton">Blog</button></a>
+    <a href="music.html"><button class="footerbutton">Music</button></a>
+    <br>
     <div style="justify-content: center;">
       <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Socials:</p>
-    <a href="https://www.instagram.com/chefkbakes/"><img style=" width: 6vh;" src="assets/igLogo.png"></a>
-              <a href="https://www.youtube.com/@ChefKatelyn"><img style=" margin-top:0; width: 7vh; mix-blend-mode: multiply;" src="assets/ytt.png"></a>
-            </div>
-    <br>Copyright &copy 2024 Chef Katelyn
+      <a href="https://www.instagram.com/chefkbakes/"><img style=" width: 6vh;" src="assets/igLogo.png"></a>
+      <a href="https://www.youtube.com/@ChefKatelyn"><img style=" margin-top:0; width: 7vh; mix-blend-mode: multiply;"
+          src="assets/ytt.png"></a>
+    </div>
+    <br>Copyright © 2024 Chef Katelyn
+  </footer>
 
-    <!-- <footer>
-      <p style="font-size: 1.2em; margin-bottom: 0" class="headerFont">
-        Website Directory:
-      </p>
-      <a href="index.html"><button class="footerbutton">Home</button></a>
-      <a href="recipes.html"> <button class="footerbutton">Recipes</button></a>
-      <a href="blog.html"><button class="footerbutton">Blog</button></a>
-      <a href="music.html"><button class="footerbutton">Music</button></a>
-      <br />
-      <div style="justify-content: center">
-        <p style="font-size: 1.2em; margin-bottom: 0" class="headerFont">
-          Socials:
-        </p>
-        <a href="https://www.instagram.com/chefkbakes/"
-          ><img style="width: 6vh" src="assets/igLogo.png"
-        /></a>
-        <a href="https://www.youtube.com/@ChefKatelyn"
-          ><img
-            style="margin-top: 0; width: 7vh; mix-blend-mode: multiply"
-            src="assets/ytt.png"
-        /></a>
-      </div>
-      <br />Copyright &copy 2024 Chef Katelyn
-    </footer> -->
+  <div id="myModal" class="modal">
+    <span class="close">×</span>
+    <img class="modal-content" id="modalImg">
+  </div>
 
+  <script>
+    const recipes = [
+      { id: 1, title: "Lilo & Stitch Meringues", image: "assets/cirlilo.png", url: "", modalImg: 'recipecard/LiloCARD.jpg' },
+      { id: 2, title: "Jellycat Cake | Simple 4\' inch Vanilla Cake", image: "assets/circake.png", url: "/recipes/jellycatCake.html", modalImg: 'recipecard/JellycatCakeCARD.jpg' },
+      { id: 4, title: "Jellycat Toast cookies", image: "assets/cirtoast.png", url: "", modalImg: 'recipecard/JellycatToastCARD.jpg' },
+      { id: 2, title: "CheckerboardCookies", image: "assets/circhecker.png", url: "/recipes/checkerboardCookies.html", modalImg: 'recipecard/CheckerboardCARD.jpg' },
+      { id: 3, title: "Buttery Soft Coffee Cake", image: "assets/circoffee.png", url: "/recipes/coffeeCake.html", modalImg: 'recipecard/coffeecakeCARD.jpg' },
+    ];
+    const recipes2 = [
+      { id: 4, title: "Fluffy Coffee Buns", image: "assets/cirbun.png", url: "/recipes/coffeeBuns.html", modalImg: 'recipecard/CoffeeBunCARD.jpg' },
+      { id: 2, title: "Petit French Rolls", image: "assets/cirpetit.png", url: "/recipes/checkerboardCookies.html", modalImg: 'recipecard/CheckerboardCARD.jpg' },
+      { id: 3, title: "Cinnamon Cruffins", image: "assets/circruffin.png", url: "/recipes/coffeeCake.html", modalImg: 'recipecard/CruffinCARD.jpg' },
+    ];
 
-    <script type="module" src="recipes.js"></script>
-  </body>
-</html>
+    function recipeCard(recipe) {
+      return `
+          <div class='centeredFlex'>
+            <img 
+              src='${recipe.image}'  
+              alt='${recipe.title}'
+              class="receipe-img"
+              data-modal-src='${recipe.modalImg}'>
+            <p class="headerFont1">${recipe.title}</p>
+          </div>
+      `;
+    }
 
+    function displayRecipes() {
+      const container = document.getElementById("recipecontainer");
+      container.innerHTML = recipes.map(recipeCard).join("");
 
-      <script>
+      const container2 = document.getElementById("recipecontainer2");
+      container2.innerHTML = recipes2.map(recipeCard).join("");
 
-        // Script for modal and backdrop
-        document.addEventListener("DOMContentLoaded", () => { 
-          const backdrop = document.querySelector(".backdrop")
-          const modal = document.querySelector(".modal")
-          const modalCloseBtn = document.querySelector(".modal-close-btn")
-          const modalHeading = document.querySelector(".modal h1")
-          const modalImg = document.querySelector(".modal-img")
-          const imgContainer = document.getElementById("recipecontainer")
+      attachModalEventListeners();
+    }
 
-          // const images = [
-          //   {id: 1, url: "https://picsum.photos/200/150"},
-          //   {id: 2, url: "https://picsum.photos/200/151"},
-          //   {id: 3, url: "https://picsum.photos/200/152"},
-          //   {id: 4, url: "https://picsum.photos/200/153"},
-          //   {id: 5, url: "https://picsum.photos/200/154"},
-          //   {id: 6, url: "https://picsum.photos/200/155"},
-          //   {id: 7, url: "https://picsum.photos/200/156"},
-          //   {id: 8, url: "https://picsum.photos/200/157"},
-          // ]
-          const images = [
-            {id: 1, title: "Jellycat Cake | Simple 4' inch Vanilla Cake", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html"},
-            {id: 2, title: "Checkerboard Cookies", image: "assets/checkerboardCookiesYT.png", url: "./recipes/checkerboardCookies.html"},
-            {id: 3, title: "Buttery Soft Coffee Cake", image: "assets/coffeeCake.jpg", url: "./recipes/coffeeCake.html"},
-            {id: 4, title: "Fluffy Coffee Buns", image: "assets/fluffyCoffeeBuns.jpg", url: "./recipes/coffeeBuns.html"},
-            {id: 5, title: "Cinnamon Cruffins", image: "assets/cinnamonCruffins.jpg", url: "./recipes/cinnamonCruffins.html"},
-            {id: 6, title: "Petit French Rolls | Beginner Friendly", image: "assets/peititFrenchRolls.jpg", url: "./recipes/frenchRolls.html"},
-        ];
+    function searchRecipes() {
+      const query = document.getElementById("search").value.toLowerCase();
+      const container = document.getElementById("recipecontainer");
+      container.innerHTML = recipes.filter(item => item.title.toLowerCase().includes(query)).map(recipeCard).join("");
+      attachModalEventListeners();
+    }
 
-          function getImages(images) {
-            return images.map(img => {
-              return `
-                <div class='videos' style= 'background-color:#ECE3D6;'>
-                  <img class="gallery-img" src=${img.image} data-id=${img.id} alt=${img.title} style = "width:18vw"/>
-                   <p class="recipesText">  ${recipe.title} </p>
-                </div>
-              `
-            }).join("") 
-          }
+    // Modal functionality
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("modalImg");
+    const span = document.getElementsByClassName("close")[0];
 
-          imgContainer.innerHTML = getImages(images)
-
-          document.addEventListener("click", (e) => {
-            if (e.target.matches(".gallery-img")) {
-              backdrop.style.display = "block"
-              modal.style.display = "block"
-              modalHeading.textContent = `image with id: ${e.target.dataset.id} is selected.`
-              modalImg.src = e.target.src
-            }
-
-            if (e.target.matches(".modal-close-btn, .backdrop")) {
-              backdrop.style.display = "none"
-              modal.style.display = "none"
-            }
-          })
-        })
-
-        // 
-
-
-
-        // const recipes = [
-        //     {title: "Jellycat Cake | Simple 4' inch Vanilla Cake", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html"},
-        //     {title: "Checkerboard Cookies", image: "assets/checkerboardCookiesYT.png", url: "./recipes/checkerboardCookies.html"},
-        //     {title: "Buttery Soft Coffee Cake", image: "assets/coffeeCake.jpg", url: "./recipes/coffeeCake.html"},
-        //     {title: "Fluffy Coffee Buns", image: "assets/fluffyCoffeeBuns.jpg", url: "./recipes/coffeeBuns.html"},
-        //     {title: "Cinnamon Cruffins", image: "assets/cinnamonCruffins.jpg", url: "./recipes/cinnamonCruffins.html"},
-        //     {title: "Petit French Rolls | Beginner Friendly", image: "assets/peititFrenchRolls.jpg", url: "./recipes/frenchRolls.html"},
-        // ];
-
-        const recipes = [
-            {id: 1, title: "Jellycat Cake | Simple 4' inch Vanilla Cake", image: "assets/jellycatCakeYT.jpg", url: "./recipes/jellycatCake.html"},
-            {id: 2, title: "Checkerboard Cookies", image: "assets/checkerboardCookiesYT.png", url: "./recipes/checkerboardCookies.html"},
-            {id: 3, title: "Buttery Soft Coffee Cake", image: "assets/coffeeCake.jpg", url: "./recipes/coffeeCake.html"},
-            {id: 4, title: "Fluffy Coffee Buns", image: "assets/fluffyCoffeeBuns.jpg", url: "./recipes/coffeeBuns.html"},
-            {id: 5, title: "Cinnamon Cruffins", image: "assets/cinnamonCruffins.jpg", url: "./recipes/cinnamonCruffins.html"},
-            {id: 6, title: "Petit French Rolls | Beginner Friendly", image: "assets/peititFrenchRolls.jpg", url: "./recipes/frenchRolls.html"},
-        
-          ];
-
-        function recipeCard(recipe){
-            return `
-                <a href='${recipe.url}' class="recipeCardLink">
-                  <div class='videos' style= 'background-color:#ECE3D6;'>
-                  <img 
-                    src = '${recipe.image}'  
-                    alt = 'Fluffy Buttery French Rolls'
-                    class = "comingsoon2" 
-                    style = "width:18vw">
-                  <p class="recipesText">  ${recipe.title} </p>
-                  </div> 
-                </a>
-            `;
+    function attachModalEventListeners() {
+      const recipeImages = document.querySelectorAll(".receipe-img");
+      recipeImages.forEach(img => {
+        img.onclick = function () {
+          modal.style.display = "flex"; // Set to flex when opening
+          modalImg.src = this.getAttribute("data-modal-src");
         }
-        function displayRecipes(){
-            const container = document.getElementById("recipecontainer");
-            container.innerHTML = recipes.map(recipeCard).join("");
-        }
-        function searchRecipes(){
-          const queery = document.getElementById("search").value.toLowerCase();
-          const container = document.getElementById("recipecontainer");
-          container.innerHTML = recipes.filter(item => item.title.toLowerCase().includes(queery)).map(recipeCard).join("");
+      });
 
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal content, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
         }
-        displayRecipes();
-      </script>
+      }
+    }
+
+    displayRecipes();
+    document.getElementById("searchbutton").addEventListener("click", searchRecipes);
+  </script>
 </body>
 
+</html>
