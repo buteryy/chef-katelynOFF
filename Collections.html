@@ -1,268 +1,535 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Chef-Katelyn</title>
-        <link href="index.css" rel="stylesheet" type="text/css" />
-        <link rel="icon" href="assets/favicon.ico" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif; margin: 0; padding: 0;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chef-Katelyn</title>
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="assets/favicon.ico" />
 
-/* Slideshow container */
-.slideshow-container {
-  width: 100vw;
-  height: 70vh;
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-/* Fixed the typo: was .sideshow-container, now .slideshow-container */
-.slideshow-container img {
-  width: 100%;
-  height: 100%;
-  object-position: center;
-  object-fit: cover;
-  display: block;
-}
+    .mySlides {
+      display: none;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(2px);
-}
+    /* Modern Slideshow Container */
+    .slideshow-container {
+      width: 600px;
+      height: 400px;
+      max-width: 90vw;
+      max-height: 60vh;
+      position: relative;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(244, 114, 182, 0.25), 0 8px 25px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(45deg, #fce7f3, #fbcfe8);
+    }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+    .slideshow-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
 
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  cursor: pointer;
-}
+    .mySlides:hover img {
+      transform: scale(1.05);
+    }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+    /* Modern Overlay Text */
+    .text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(244, 114, 182, 0.9) 100%);
+      color: #ffffff;
+      font-size: clamp(14px, 2.5vw, 18px);
+      font-weight: 600;
+      padding: 30px 20px 20px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      backdrop-filter: blur(10px);
+      border-radius: 0 0 20px 20px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      transform: translateY(100%);
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1s;
-}
+    .mySlides.active .text {
+      transform: translateY(0);
+    }
 
-@keyframes fade {
-  from {opacity: 0} 
-  to {opacity: 1}
-}
+    /* Modern Navigation Buttons */
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(244, 114, 182, 0.2);
+      border: 2px solid rgba(244, 114, 182, 0.3);
+      color: #ec4899;
+      font-size: 16px;
+      font-weight: bold;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+      user-select: none;
+    }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
+    .nav-btn:hover {
+      background: rgba(244, 114, 182, 0.3);
+      border-color: rgba(244, 114, 182, 0.5);
+      color: #be185d;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 8px 25px rgba(244, 114, 182, 0.3);
+    }
 
-/* Ensure mySlides takes full container size */
-.mySlides {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+    .nav-btn:active {
+      transform: translateY(-50%) scale(0.95);
+    }
 
-</style>
+    .prev-btn {
+      left: 15px;
+    }
+
+    .next-btn {
+      right: 15px;
+    }
+
+    /* Modern Dots Indicator */
+    .dots-container {
+      text-align: center;
+      padding: 20px;
+      background: transparent;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 6px;
+      background: rgba(244, 114, 182, 0.4);
+      border-radius: 50%;
+      display: inline-block;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: pointer;
+      position: relative;
+      border: 2px solid transparent;
+    }
+
+    .dot::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition: all 0.4s ease;
+    }
+
+    .dot:hover {
+      background: rgba(244, 114, 182, 0.7);
+      transform: scale(1.2);
+    }
+
+    .dot.active {
+      background: #ec4899;
+      transform: scale(1.3);
+      box-shadow: 0 4px 15px rgba(244, 114, 182, 0.4);
+    }
+
+    .dot.active::before {
+      border-color: rgba(244, 114, 182, 0.5);
+      transform: scale(1.5);
+    }
+
+    /* Number Text */
+    .numbertext {
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 12px;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(244, 114, 182, 0.6);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(244, 114, 182, 0.3);
+      z-index: 5;
+    }
+
+    /* Smooth Animations */
+    .fade {
+      animation: modernFade 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    @keyframes modernFade {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Loading Animation */
+    .slideshow-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(244, 114, 182, 0.1),
+        transparent
+      );
+      z-index: 1;
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .slideshow-container {
+        width: 90vw;
+        height: 300px;
+        border-radius: 15px;
+      }
+      
+      .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+      }
+      
+      .prev-btn {
+        left: 10px;
+      }
+      
+      .next-btn {
+        right: 10px;
+      }
+      
+      .text {
+        padding: 20px 15px 15px;
+        font-size: 14px;
+      }
+      
+      .numbertext {
+        font-size: 11px;
+        padding: 6px 10px;
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slideshow-container {
+        width: 95vw;
+        height: 250px;
+      }
+      
+      .text {
+        padding: 15px 12px 12px;
+        font-size: 13px;
+      }
+      
+      .dot {
+        height: 8px;
+        width: 8px;
+        margin: 0 4px;
+      }
+    }
+
+    /* Ensure mySlides takes full container size */
+    .mySlides {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .mySlides.active {
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
- <!-- Navigation -->
+  <!-- Navigation -->
  <header id="top">
-  <div id="navDiv" class="navDiv">
-    <a href="https://chef-katelyn.com/index.html">
-      <img
-        class="navLogo"
-        src="assets/navlogo.png"
-        alt="Chef Katelyn Logo"
-      />
-    </a>
-    <nav style="margin-left: auto">
-      <ul style="text-align: right">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">Cookie Art</a></li>
-        <li class="dropdown">
-          <a href="Collections.html">Collections</a>
-          <div class="dropdown-content">
-            <ul class="dropdownRecipes">
-              <li class="dropdownItems">
-                <a href="recipes.html">Jellycats</a>
-              </li>
-              <li class="dropdownItems">
-                <a href="recipes.html">Custom Cookie Box</a>
-              </li>
-              <li class="dropdownItems">
-                <a href="recipes.html">Meringues</a>
-              </li>
-              <li class="dropdownItems">
-                <a href="recipes.html">Brownies</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="recipes.html">Recipes</a>
-          <div class="dropdown-content">
-            <ul class="dropdownRecipes">
-              <li class="dropdownItems">
-                <a href="recipes.html">Desserts</a>
-              </li>
-              <li class="dropdownItems">
-                <a href="recipes.html">Breads</a>
-              </li>
-              <li class="dropdownItems">
-                <a href="recipes.html">Cooking</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </nav>
+      <div id="navDiv" class="navDiv">
+        <a href="https://chef-katelyn.com/index.html">
+          <img
+            class="navLogo"
+            src="assets/navlogo.png"
+            alt="Chef Katelyn Logo"
+          />
+        </a>
+        <nav style="margin-left: auto">
+          <ul style="text-align: right">
+            <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+              <a href="Collections.html">Cookie Art</a>
+              <div class="dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="#">item 1</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">item 2</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">item 3</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">item 4</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="Collections.html">Collections</a>
+              <div class="dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Jellycats</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Cakes</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Meringues</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Brownies</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="recipes.html">Recipes</a>
+              <div class="dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Desserts</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Breads</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipes.html">Cooking</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+              <li class="dropdown">
+              <a href="blog.html">Blogs</a>
+              <div class="blog dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="#">Year</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">Year</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">Year</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">Year</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+  <div class="slideshow-container">
+    <!-- Navigation Buttons -->
+    <div class="nav-btn prev-btn" onclick="plusSlides(-1)">❮</div>
+    <div class="nav-btn next-btn" onclick="plusSlides(1)">❯</div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 8</div>
+      <img src="cookies/avrielcookie.png" alt="Avriel's Birthday Cookie">
+      <div class="text">Avriel's 2nd Birthday</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 8</div>
+      <img src="cookies/cameron cookie.png" alt="Cameron's Birthday Cookie">
+      <div class="text">Cameron's Birthday</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 8</div>
+      <img src="cookies/xaviercookie.JPG" alt="Xavier's Graduation Cookie">
+      <div class="text">Xavier's Graduation</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 8</div>
+      <img src="cookies/olinacookie.JPEG" alt="Olina's Birthday Cookie">
+      <div class="text">Olina's 19th Birthday</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 8</div>
+      <img src="cookies/karinacookie.JPG" alt="Karina's Birthday Cookie">
+      <div class="text">Karina's 23rd Birthday</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 8</div>
+      <img src="cookies/dadcookie.png" alt="Father's Day Cookie">
+      <div class="text">Father's Day</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 8</div>
+      <img src="cookies/pencilcookie.JPG" alt="Teacher's Appreciation Cookie">
+      <div class="text">Teacher's Appreciation Week</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 8</div>
+      <img src="cookies/weddingcookie.jpg" alt="Wedding Cookie">
+      <div class="text">Wedding</div>
+    </div>
   </div>
-</header>
 
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+  </div>
 
+  <script>
+    let slideIndex = 1;
+    let slideTimer;
 
+    showSlides(slideIndex);
+    startAutoSlide();
 
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+      resetAutoSlide();
+    }
 
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+      resetAutoSlide();
+    }
 
-<div class="slideshow-container">
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      
+      // Remove active class from all slides and dots
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        slides[i].classList.remove("active");
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      
+      // Show current slide and activate dot
+      slides[slideIndex - 1].style.display = "block";
+      slides[slideIndex - 1].classList.add("active");
+      dots[slideIndex - 1].classList.add("active");
+    }
 
-<div class="mySlides fade">
-  <img src="cookies/avrielcookie.png" alt="Avriel's Birthday Cookie">
-  <div class="text">Avriel's 2nd Birthday</div>
-</div>
+    function autoSlides() {
+      slideIndex++;
+      if (slideIndex > document.getElementsByClassName("mySlides").length) {
+        slideIndex = 1;
+      }
+      showSlides(slideIndex);
+    }
 
-<div class="mySlides fade">
-  <img src="cookies/cameron cookie.png" alt="Cameron's Birthday Cookie">
-  <div class="text">Cameron's Birthday</div>
-</div>
+    function startAutoSlide() {
+      slideTimer = setInterval(autoSlides, 5000);
+    }
 
-<div class="mySlides fade">
-  <img src="cookies/xaviercookie.JPG" alt="Xavier's Graduation Cookie">
-  <div class="text">Xavier's Graduation</div>
-</div>
+    function resetAutoSlide() {
+      clearInterval(slideTimer);
+      startAutoSlide();
+    }
 
-<div class="mySlides fade">
-    <img src="cookies/olinacookie.JPEG" alt="Olina's Birthday Cookie">
-    <div class="text">Olina's 19th Birthday</div>
-</div>
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') {
+        plusSlides(-1);
+      } else if (e.key === 'ArrowRight') {
+        plusSlides(1);
+      }
+    });
 
-<div class="mySlides fade">
-    <img src="cookies/karinacookie.JPG" alt="Karina's Birthday Cookie">
-    <div class="text">Karina's 23rd Birthday</div>
-</div>
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-<div class="mySlides fade">
-    <img src="cookies/dadcookie.png" alt="Father's Day Cookie">
-    <div class="text">Father's Day</div>
-</div>
+    document.addEventListener('touchstart', function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+    });
 
-<div class="mySlides fade">
-    <img src="cookies/pencilcookie.JPG" alt="Teacher's Appreciation Cookie">
-    <div class="text">Teacher's Appreciation Week</div>
-</div> 
+    document.addEventListener('touchend', function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
 
-<div class="mySlides fade">
-    <img src="cookies/weddingcookie.jpg" alt="Wedding Cookie">
-    <div class="text">Wedding</div>
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center; padding: 20px;">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-    <span class="dot" onclick="currentSlide(4)"></span> 
-    <span class="dot" onclick="currentSlide(5)"></span> 
-    <span class="dot" onclick="currentSlide(6)"></span> 
-    <span class="dot" onclick="currentSlide(7)"></span> 
-    <span class="dot" onclick="currentSlide(8)"></span> 
-</div>
-
-<script>
-let slideIndex = 1;
-let slideTimer;
-
-showSlides(slideIndex);
-startAutoSlide();
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-  resetAutoSlide();
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-  resetAutoSlide();
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-function autoSlides() {
-  slideIndex++;
-  if (slideIndex > document.getElementsByClassName("mySlides").length) {
-    slideIndex = 1;
-  }
-  showSlides(slideIndex);
-}
-
-function startAutoSlide() {
-  slideTimer = setInterval(autoSlides, 4000);
-}
-
-function resetAutoSlide() {
-  clearInterval(slideTimer);
-  startAutoSlide();
-}
-</script>
+    function handleSwipe() {
+      if (touchEndX < touchStartX - 50) {
+        plusSlides(1); // Swipe left - next slide
+      }
+      if (touchEndX > touchStartX + 50) {
+        plusSlides(-1); // Swipe right - previous slide
+      }
+    }
+  </script>
 
 </body>
+
 </html>

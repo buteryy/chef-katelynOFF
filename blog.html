@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chef Katelyn - Blog</title>
-    <link href="blog.css" rel="stylesheet" type="text/css" />
-    <link href="allblogs.css" rel="stylesheet" type="text/css" /> 
-    <header id="top">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chef Katelyn - Blog</title>
+  <link href="blog.css" rel="stylesheet" type="text/css" />
+  <link href="allblogs.css" rel="stylesheet" type="text/css" />
+</head>
+ <header id="top">
       <div id="navDiv" class="navDiv">
         <a href="https://chef-katelyn.com/index.html">
           <img
@@ -18,7 +20,25 @@
         <nav style="margin-left: auto">
           <ul style="text-align: right">
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Cookie Art</a></li>
+              <li class="dropdown">
+              <a href="Collections.html">Cookie Art</a>
+              <div class="dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="#">item 1</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">item 2</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">item 3</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">item 4</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="dropdown">
               <a href="Collections.html">Collections</a>
               <div class="dropdown-content">
@@ -27,7 +47,7 @@
                     <a href="recipes.html">Jellycats</a>
                   </li>
                   <li class="dropdownItems">
-                    <a href="recipes.html">Custom Cookie Box</a>
+                    <a href="recipes.html">Cakes</a>
                   </li>
                   <li class="dropdownItems">
                     <a href="recipes.html">Meringues</a>
@@ -54,78 +74,81 @@
                 </ul>
               </div>
             </li>
-            <li><a href="blog.html">Blog</a></li>
+              <li class="dropdown">
+              <a href="blog.html">Blogs</a>
+              <div class="blog dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="#">Year</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">Year</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">Year</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="#">Year</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </nav>
       </div>
-    </header>
-
-
-
-
-      </div>
-    </header>
-
-    <main>
-      <div style="display: flex; justify-content: center">
-        <div id="recentBlogDisplay" class="recentblog">
-            </div>
-      </div>
-
-      <div class="search-container">
-        <input
-          class="box-control"
-          type="search"
-          id="search"
-          placeholder="Search blogs"
-        />
-        <button class="footerbutton" id="blogSearchButton">Search</button>
-      </div>
-
-      <div id="blogCardsContainer" class="recentrecipes"></div>
-    </main>
-
-    <footer>
-      <p class="headerFont" style="font-size: 1.2em; margin-bottom: 0">
-        Website Directory:
-      </p>
-      <a href="index.html"><button class="footerbutton">Home</button></a>
-      <a href="recipes.html"><button class="footerbutton">Recipes</button></a>
-      <a href="blog.html"><button class="footerbutton">Blog</button></a>
-      <a href="music.html"><button class="footerbutton">Music</button></a>
-      <br />
-      <div style="justify-content: center">
-        <p class="headerFont" style="font-size: 1.2em; margin-bottom: 0">
-          Socials:
-        </p>
-        <a href="https://www.instagram.com/chefkbakes/">
-          <img style="width: 6vh" src="assets/igLogo.png" alt="Instagram" />
-        </a>
-        <a href="https://www.youtube.com/@ChefKatelyn">
-          <img
-            style="width: 7vh; mix-blend-mode: multiply"
-            src="assets/ytt.png"
-            alt="YouTube"
-          />
-        </a>
-      </div>
-      <br />
-      <p>Copyright © 2025 Chef Katelyn</p>
-    </footer>
-
-    <div id="blogModal" class="modal">
-      <div class="modal-content">
-        <span class="close-button">×</span>
-        <div id="modalBlogContent">
-          </div>
-        <div class="modal-navigation">
-          <button id="prevBlogBtn" class="footerbutton">Previous Blog</button>
-          <button id="nextBlogBtn" class="footerbutton">Next Blog</button>
-        </div>
-      </div>
+ </header>
+<main>
+  <div style="display: flex; justify-content: center">
+    <div id="recentBlogDisplay" class="recentblog">
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-    <script type="module" src="blog.js"></script>
-  </body>
+  </div>
+
+  <div class="search-container">
+    <input class="box-control" type="search" id="search" placeholder="Search blogs" />
+    <button class="footerbutton" id="blogSearchButton">Search</button>
+  </div>
+
+  <div id="blogCardsContainer" class="recentrecipes"></div>
+</main>
+
+<footer>
+  <p class="headerFont" style="font-size: 1.2em; margin-bottom: 0">
+    Website Directory:
+  </p>
+  <a href="index.html"><button class="footerbutton">Home</button></a>
+  <a href="recipes.html"><button class="footerbutton">Recipes</button></a>
+  <a href="blog.html"><button class="footerbutton">Blog</button></a>
+  <a href="music.html"><button class="footerbutton">Music</button></a>
+  <br />
+  <div style="justify-content: center">
+    <p class="headerFont" style="font-size: 1.2em; margin-bottom: 0">
+      Socials:
+    </p>
+    <a href="https://www.instagram.com/chefkbakes/">
+      <img style="width: 6vh" src="assets/igLogo.png" alt="Instagram" />
+    </a>
+    <a href="https://www.youtube.com/@ChefKatelyn">
+      <img style="width: 7vh; mix-blend-mode: multiply" src="assets/ytt.png" alt="YouTube" />
+    </a>
+  </div>
+  <br />
+  <p>Copyright © 2025 Chef Katelyn</p>
+</footer>
+
+<div id="blogModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">×</span>
+    <div id="modalBlogContent">
+    </div>
+    <div class="modal-navigation">
+      <button id="prevBlogBtn" class="footerbutton">Previous Blog</button>
+      <button id="nextBlogBtn" class="footerbutton">Next Blog</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+<script type="module" src="blog.js"></script>
+</body>
+
 </html>
