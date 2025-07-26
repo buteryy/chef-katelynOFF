@@ -1,4 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
+// Modal functionality
+    const modal = document.getElementById("myModal");
+    const span = document.getElementsByClassName("close")[0];
+
+
+      const viewButton = document.getElementById("video-section-img");
+
+        viewButton.onclick = function () {
+          modal.style.display = "flex"; 
+        }
+
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal content, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    
+
+
   const carouselInner = document.querySelector(".carousel-inner")
   const carouselItems = document.querySelectorAll(".carousel-item")
   const totalItems = carouselItems.length
