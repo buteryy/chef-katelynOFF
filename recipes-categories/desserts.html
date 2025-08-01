@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chef Katelyn-Recipes</title>
-  <link href="recipes.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="index.css">
+  <link href="../recipes.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../index.css">
 </head>
 
 <body>
@@ -15,15 +15,15 @@
       <a href="https://chef-katelyn.com/index.html">
         <img
           class="navLogo"
-          src="assets/navlogo.png"
+          src="../assets/navlogo.png"
           alt="Chef Katelyn Logo"
         />
       </a>
       <nav style="margin-left: auto">
         <ul style="text-align: right">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
             <li class="dropdown">
-            <a href="Collections.html">Cookie Art</a>
+            <a href="../Collections.html">Cookie Art</a>
             <div class="dropdown-content">
               <ul class="dropdownRecipes">
                 <li class="dropdownItems">
@@ -42,48 +42,48 @@
             </div>
           </li>
           <li class="dropdown">
-            <a href="Collections.html">Collections</a>
+            <a href="../Collections.html">Collections</a>
             <div class="dropdown-content">
               <ul class="dropdownRecipes">
                 <li class="dropdownItems">
-                  <a href="recipes.html">Brownies</a>
+                  <a href="../recipes.html">Brownies</a>
                 </li>
                 <li class="dropdownItems">
-                  <a href="recipes.html">Cakes</a>
+                  <a href="../recipes.html">Cakes</a>
                 </li>
                 <li class="dropdownItems">
-                  <a href="recipes.html">Macarons</a>
+                  <a href="../recipes.html">Macarons</a>
                 </li>
                 <li class="dropdownItems">
-                  <a href="recipes.html">Meringues</a>
+                  <a href="../recipes.html">Meringues</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="dropdown">
-            <a href="recipes.html">Recipes</a>
+            <a href="../recipes.html">Recipes</a>
             <div class="dropdown-content">
               <ul class="dropdownRecipes">
                 <li class="dropdownItems">
-                  <a href="recipes.html">Breads</a>
+                  <a href="../recipes.html">Breads</a>
                 </li>
                 <li class="dropdownItems">
-                  <a href="recipes.html">Desserts</a>
+                  <a href="../recipes.html">Desserts</a>
                 </li>
                 <li class="dropdownItems">
-                  <a href="recipes.html">Pasta</a>
+                  <a href="../recipes.html">Pasta</a>
                 </li>
                 <li class="dropdownItems">
-                  <a href="recipes.html">Appetizers</a>
+                  <a href="../recipes.html">Appetizers</a>
                 </li>
                 <li class="dropdownItems">
-                  <a href="recipes.html">Snacks</a>
+                  <a href="../recipes.html">Snacks</a>
                 </li>
               </ul>
             </div>
           </li>
             <li class="dropdown">
-            <a href="blog.html">Blogs</a>
+            <a href="../blog.html">Blogs</a>
             <div class="blog dropdown-content">
               <ul class="dropdownRecipes">
                 <li class="dropdownItems">
@@ -102,14 +102,14 @@
             </div>
           </li>
           <li class="dropdown">
-            <a href="blog.html">Chef's Corner</a>
+            <a href="../blog.html">Chef's Corner</a>
             <div class="blog dropdown-content">
               <ul class="dropdownRecipes">
                 <li class="dropdownItems">
                   <a href="#">Baking & Cooking Tips</a>
                 </li>
                 <li class="dropdownItems">
-                  <a href="measurement.html">Measurement Convertor</a>
+                  <a href="../measurement.html">Measurement Convertor</a>
                 </li>
                 <li class="dropdownItems">
                   <a href="#">Kitchen Essentials</a>
@@ -131,20 +131,25 @@
     <button class="footerbutton" id="searchbutton">Search</button>
   </div>
   <div>
-    <h3 class="headerFont2">Sweets</h3>
+    <h3 class="headerFont2">
+      <a href="../recipes-categories/desserts.html">
+        <span>Desserts</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </h3>
+
     <div id="recipecontainer" class="recentrecipes"></div>
   </div>
-  <div>
-    <h3 class="headerFont2">Breads</h3>
-    <div id="recipecontainer2" class="recentrecipes"></div>
-  </div>
+
 
   <footer>
     <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Website Directory:</p>
-    <a href="index.html"><button class="footerbutton">Home</button></a>
-    <a href="recipes.html"> <button class="footerbutton">Recipes</button></a>
-    <a href="blog.html"><button class="footerbutton">Blog</button></a>
-    <a href="music.html"><button class="footerbutton">Music</button></a>
+    <a href="../index.html"><button class="footerbutton">Home</button></a>
+    <a href="../recipes.html"> <button class="footerbutton">Recipes</button></a>
+    <a href="../blog.html"><button class="footerbutton">Blog</button></a>
+    <a href="../music.html"><button class="footerbutton">Music</button></a>
     <br>
     <div style="justify-content: center;">
       <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Socials:</p>
@@ -162,18 +167,13 @@
 
   <script>
     const recipes = [
-      { id: 1, title: "Lilo & Stitch Meringues", image: "assets/cirlilo.png", url: "", modalImg: 'recipecard/LiloCARD.jpg' },
-      { id: 2, title: "Jellycat Cake | Simple 4\' inch Vanilla Cake", image: "assets/circake.png", url: "/recipes/jellycatCake.html", modalImg: 'recipecard/JellycatCakeCARD.jpg' },
-      { id: 4, title: "Jellycat Toast cookies", image: "assets/cirtoast.png", url: "", modalImg: 'recipecard/JellycatToastCARD.jpg' },
-      { id: 2, title: "CheckerboardCookies", image: "assets/circhecker.png", url: "/recipes/checkerboardCookies.html", modalImg: 'recipecard/CheckerboardCARD.jpg' },
-      { id: 3, title: "Buttery Soft Coffee Cake", image: "assets/circoffee.png", url: "/recipes/coffeeCake.html", modalImg: 'recipecard/coffeecakeCARD.jpg' },
+      { id: 1, title: "Lilo & Stitch Meringues", image: "../assets/cirlilo.png", url: "", modalImg: '../recipecard/LiloCARD.jpg' },
+      { id: 2, title: "Jellycat Cake | Simple 4\' inch Vanilla Cake", image: "../assets/circake.png", url: "/recipes/jellycatCake.html", modalImg: '../recipecard/JellycatCakeCARD.jpg' },
+      { id: 4, title: "Jellycat Toast cookies", image: "../assets/cirtoast.png", url: "", modalImg: '../recipecard/JellycatToastCARD.jpg' },
+      { id: 2, title: "CheckerboardCookies", image: "../assets/circhecker.png", url: "/recipes/checkerboardCookies.html", modalImg: '../recipecard/CheckerboardCARD.jpg' },
+      { id: 3, title: "Buttery Soft Coffee Cake", image: "../assets/circoffee.png", url: "/recipes/coffeeCake.html", modalImg: '../recipecard/coffeecakeCARD.jpg' },
     ];
-    const recipes2 = [
-      { id: 4, title: "Fluffy Coffee Buns", image: "assets/cirbun.png", url: "/recipes/coffeeBuns.html", modalImg: 'recipecard/CoffeeBunCARD.jpg' },
-      { id: 2, title: "Petit French Rolls", image: "assets/cirpetit.png", url: "/recipes/checkerboardCookies.html", modalImg: 'recipecard/CheckerboardCARD.jpg' },
-      { id: 3, title: "Cinnamon Cruffins", image: "assets/circruffin.png", url: "/recipes/coffeeCake.html", modalImg: 'recipecard/CruffinCARD.jpg' },
-    ];
-
+  
     function recipeCard(recipe) {
       return `
           <div class='centeredFlex'>
@@ -190,9 +190,6 @@
     function displayRecipes() {
       const container = document.getElementById("recipecontainer");
       container.innerHTML = recipes.map(recipeCard).join("");
-
-      const container2 = document.getElementById("recipecontainer2");
-      container2.innerHTML = recipes2.map(recipeCard).join("");
 
       attachModalEventListeners();
     }
