@@ -11,6 +11,7 @@ body {
   width: 27em;
 }
 
+
 .reciepe1 {
   display: none;
   position: absolute;
@@ -110,6 +111,15 @@ li a:hover {
   text-align: left;
   margin: 3em;
 }
+
+.headerFont2 a {
+  text-decoration: none;
+  color: #7c695c;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /*SEARCH BAR*/
 .search-container {
   display: flex;
