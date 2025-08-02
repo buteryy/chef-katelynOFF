@@ -132,7 +132,7 @@
   </div>
   <div>
     <h3 class="headerFont2">
-      <a href="desserts.html">
+      <a href="../recipes-categories/desserts.html">
         <span>Desserts</span>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -146,10 +146,10 @@
 
   <footer>
     <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Website Directory:</p>
-    <a href="index.html"><button class="footerbutton">Home</button></a>
-    <a href="recipes.html"> <button class="footerbutton">Recipes</button></a>
-    <a href="blog.html"><button class="footerbutton">Blog</button></a>
-    <a href="music.html"><button class="footerbutton">Music</button></a>
+    <a href="../index.html"><button class="footerbutton">Home</button></a>
+    <a href="../recipes.html"> <button class="footerbutton">Recipes</button></a>
+    <a href="../blog.html"><button class="footerbutton">Blog</button></a>
+    <a href="../music.html"><button class="footerbutton">Music</button></a>
     <br>
     <div style="justify-content: center;">
       <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Socials:</p>
@@ -167,18 +167,11 @@
 
   <script>
     const recipes = [
-      { id: 1, title: "Lilo & Stitch Meringues", image: "../assets/cirlilo.png", modalImg: '../recipecard/LiloCARD.jpg' },
-      { id: 2, title: "Jellycat Cake | Simple 4\' inch Vanilla Cake", image: "../assets/circake.png", modalImg: '../recipecard/JellycatCakeCARD.jpg' },
-      { id: 3, title: "Jellycat Toast cookies", image: "../assets/cirtoast.png", modalImg: '../recipecard/JellycatToastCARD.jpg' },
-      { id: 4, title: "CheckerboardCookies", image: "../assets/circhecker.png", modalImg: '../recipecard/CheckerboardCARD.jpg' },
-      { id: 5, title: "Buttery Soft Coffee Cake", image: "../assets/circoffee.png", modalImg: '../recipecard/coffeecakeCARD.jpg' },
-      { id: 6, title: "CNY Macaroons", image: "/recipecard/CNYMacaroons.png", modalImg: '#' },
-      { id: 7, title: "Coffee Cake Cookies", image: "/recipecard/CoffeeCakeCookies.png", modalImg: '#' },
-      { id: 8, title: "Lemon Cake", image: "/recipecard/LemonCake.png", modalImg: '#' },
-      { id: 9, title: "Chocolate Cookies", image: "/recipecard/ChocoCookie.png", modalImg: '#' },
-      { id: 10, title: "Strawberry Cake", image: "/recipecard/Strawberry Cake.png", modalImg: '#' },
-      { id: 11, title: "Starberry Cake", image: "/recipecard/Strawberry.png", modalImg: '#' },
-
+      { id: 1, title: "Lilo & Stitch Meringues", image: "../assets/cirlilo.png", url: "", modalImg: '../recipecard/LiloCARD.jpg' },
+      { id: 2, title: "Jellycat Cake | Simple 4\' inch Vanilla Cake", image: "../assets/circake.png", url: "/recipes/jellycatCake.html", modalImg: '../recipecard/JellycatCakeCARD.jpg' },
+      { id: 4, title: "Jellycat Toast cookies", image: "../assets/cirtoast.png", url: "", modalImg: '../recipecard/JellycatToastCARD.jpg' },
+      { id: 2, title: "CheckerboardCookies", image: "../assets/circhecker.png", url: "/recipes/checkerboardCookies.html", modalImg: '../recipecard/CheckerboardCARD.jpg' },
+      { id: 3, title: "Buttery Soft Coffee Cake", image: "../assets/circoffee.png", url: "/recipes/coffeeCake.html", modalImg: '../recipecard/coffeecakeCARD.jpg' },
     ];
   
     function recipeCard(recipe) {

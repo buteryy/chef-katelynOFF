@@ -1,236 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Chef Katelyn-Music</title>
+    <link href="music.css" rel="stylesheet" type="text/css" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chef Katelyn-Recipes</title>
-  <link href="../recipes.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="../index.css">
-</head>
-
-<body>
-  <header id="top">
-    <div id="navDiv" class="navDiv">
-      <a href="https://chef-katelyn.com/index.html">
-        <img
-          class="navLogo"
-          src="../assets/navlogo.png"
-          alt="Chef Katelyn Logo"
-        />
-      </a>
-      <nav style="margin-left: auto">
-        <ul style="text-align: right">
-          <li><a href="index.html">Home</a></li>
+    <header id="top">
+      <div id="navDiv" class="navDiv">
+        <a href="https://chef-katelyn.com/index.html">
+          <img
+            class="navLogo"
+            src="assets/navlogo.png"
+            alt="Chef Katelyn Logo"
+          />
+        </a>
+        <nav style="margin-left: auto">
+          <ul style="text-align: right">
+            <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+              <a href="Collections.html">Cookie Art</a>
+              <div class="dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="cookiebaby.html">Baby Shower</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="cookiebirthday.html">Birthday</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="cookiewedding.html">Wedding & Anniversary</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="cookiespecial.html">Special Occasions</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="dropdown">
-            <a href="Collections.html">Cookie Art</a>
-            <div class="dropdown-content">
-              <ul class="dropdownRecipes">
-                <li class="dropdownItems">
-                  <a href="cookiebaby.html">Baby Shower</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="cookiebirthday.html">Birthday</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="cookiewedding.html">Wedding & Anniversary</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="cookiespecial.html">Special Occasions</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="Collections.html">Collections</a>
-            <div class="dropdown-content">
-              <ul class="dropdownRecipes">
-                <li class="dropdownItems">
-                  <a href="collectionsbrownies.html">Brownies</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="collectioncakes.html">Cakes</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="collectionmacarons.html">Macarons</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="collectionmeringues.html">Meringues</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="recipes.html">Recipes</a>
-            <div class="dropdown-content">
-              <ul class="dropdownRecipes">
-                <li class="dropdownItems">
-                  <a href="recipesbreads.html">Breads</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="recipesdesserts.html">Desserts</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="recipespasta.html">Pasta</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="recipesapps.html">Appetizers</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="recipessnacks.html">Snacks</a>
-                </li>
-              </ul>
-            </div>
-          </li>
+              <a href="Collections.html">Collections</a>
+              <div class="dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="collectionsbrownies.html">Brownies</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="collectioncakes.html">Cakes</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="collectionmacarons.html">Macarons</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="collectionmeringues.html">Meringues</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="dropdown">
-            <a href="blog.html">Blogs</a>
-            <div class="blog dropdown-content">
-              <ul class="dropdownRecipes">
-                <li class="dropdownItems">
-                  <a href="blogsfav.html">Katelyn's Favorites</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="blogs2024.html">2024</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="blogs2025.html">2025</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="blogs2026.html">2026</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="blog.html">Chef's Corner</a>
-            <div class="blog dropdown-content">
-              <ul class="dropdownRecipes">
-                <li class="dropdownItems">
-                  <a href="cheftips.html">Baking & Cooking Tips</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="chefmeasurement.html">Measurement Convertor</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="chefessentials.html">Kitchen Essentials</a>
-                </li>
-                <li class="dropdownItems">
-                  <a href="chefsubstitutions.html">Ingredient Substitutions</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <p class="headerFont"><i>Recipes</i></p>
+              <a href="recipes.html">Recipes</a>
+              <div class="dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="recipesbreads.html">Breads</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipesdesserts.html">Desserts</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipespasta.html">Pasta</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipesapps.html">Appetizers</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="recipessnacks.html">Snacks</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+              <li class="dropdown">
+              <a href="blog.html">Blogs</a>
+              <div class="blog dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="blogsfav.html">Katelyn's Favorites</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="blogs2024.html">2024</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="blogs2025.html">2025</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="blogs2026.html">2026</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="blog.html">Chef's Corner</a>
+              <div class="blog dropdown-content">
+                <ul class="dropdownRecipes">
+                  <li class="dropdownItems">
+                    <a href="cheftips.html">Baking & Cooking Tips</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="chefmeasurement.html">Measurement Convertor</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="chefessentials.html">Kitchen Essentials</a>
+                  </li>
+                  <li class="dropdownItems">
+                    <a href="chefsubstitutions.html">Ingredient Substitutions</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <div class="search-container">
-    <input class="box-control" type="search" id="search" />
-    <button class="footerbutton" id="searchbutton">Search</button>
-  </div>
-  <div>
-    <h3 class="headerFont2">
-      <a href="desserts.html">
-        <span>Appetizers</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </h3>
-
-    <div id="recipecontainer" class="recentrecipes"></div>
-  </div>
 
 
-  <footer>
-    <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Website Directory:</p>
-    <a href="index.html"><button class="footerbutton">Home</button></a>
-    <a href="recipes.html"> <button class="footerbutton">Recipes</button></a>
-    <a href="blog.html"><button class="footerbutton">Blog</button></a>
-    <a href="music.html"><button class="footerbutton">Music</button></a>
-    <br>
-    <div style="justify-content: center;">
-      <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Socials:</p>
-      <a href="https://www.instagram.com/chefkbakes/"><img style=" width: 6vh;" src="assets/igLogo.png"></a>
-      <a href="https://www.youtube.com/@ChefKatelyn"><img style=" margin-top:0; width: 7vh; mix-blend-mode: multiply;"
-          src="assets/ytt.png"></a>
-    </div>
-    <br>Copyright © 2024 Chef Katelyn
-  </footer>
 
-  <div id="myModal" class="modal">
-    <span class="close">×</span>
-    <img class="modal-content" id="modalImg">
-  </div>
 
-  <script>
-    const recipes = [
-      { id: 1, title: "Lilo & Stitch Meringues", image: "../assets/cirlilo.png", url: "", modalImg: '../recipecard/LiloCARD.jpg' },
-      { id: 2, title: "Jellycat Cake | Simple 4\' inch Vanilla Cake", image: "../assets/circake.png", url: "/recipes/jellycatCake.html", modalImg: '../recipecard/JellycatCakeCARD.jpg' },
-      { id: 4, title: "Jellycat Toast cookies", image: "../assets/cirtoast.png", url: "", modalImg: '../recipecard/JellycatToastCARD.jpg' },
-      { id: 2, title: "CheckerboardCookies", image: "../assets/circhecker.png", url: "/recipes/checkerboardCookies.html", modalImg: '../recipecard/CheckerboardCARD.jpg' },
-      { id: 3, title: "Buttery Soft Coffee Cake", image: "../assets/circoffee.png", url: "/recipes/coffeeCake.html", modalImg: '../recipecard/coffeecakeCARD.jpg' },
-    ];
-  
-    function recipeCard(recipe) {
-      return `
-          <div class='centeredFlex'>
-            <img 
-              src='${recipe.image}'  
-              alt='${recipe.title}'
-              class="receipe-img"
-              data-modal-src='${recipe.modalImg}'>
-            <p class="headerFont1">${recipe.title}</p>
-          </div>
-      `;
-    }
-
-    function displayRecipes() {
-      const container = document.getElementById("recipecontainer");
-      container.innerHTML = recipes.map(recipeCard).join("");
-
-      attachModalEventListeners();
-    }
-
-    function searchRecipes() {
-      const query = document.getElementById("search").value.toLowerCase();
-      const container = document.getElementById("recipecontainer");
-      container.innerHTML = recipes.filter(item => item.title.toLowerCase().includes(query)).map(recipeCard).join("");
-      attachModalEventListeners();
-    }
-
-    // Modal functionality
-    const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("modalImg");
-    const span = document.getElementsByClassName("close")[0];
-
-    function attachModalEventListeners() {
-      const recipeImages = document.querySelectorAll(".receipe-img");
-      recipeImages.forEach(img => {
-        img.onclick = function () {
-          modal.style.display = "flex"; // Set to flex when opening
-          modalImg.src = this.getAttribute("data-modal-src");
-        }
-      });
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
-        modal.style.display = "none";
-      }
-
-      // When the user clicks anywhere outside of the modal content, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    }
-
-    displayRecipes();
-    document.getElementById("searchbutton").addEventListener("click", searchRecipes);
-  </script>
-</body>
-
+  <body>
+   <p style="">breads</p>
+    <footer style="margin-top: 5rem">
+      <p class="headerFont" style="font-size: 1.2em; margin-bottom: 0">
+        Website Directory:
+      </p>
+      <div>
+        <a href="index.html"><button class="footerbutton">Home</button></a>
+        <a href="recipes.html"><button class="footerbutton">Recipes</button></a>
+        <a href="blog.html"><button class="footerbutton">Blog</button></a>
+        <a href="music.html"><button class="footerbutton">Music</button></a>
+      </div>
+      <br />
+      <div style="text-align: center">
+        <p class="headerFont" style="font-size: 1.2em; margin-bottom: 0">
+          Socials:
+        </p>
+        <a href="https://www.instagram.com/chefkbakes/">
+          <img src="assets/igLogo.png" alt="Instagram" style="width: 6vh" />
+        </a>
+        <a href="https://www.youtube.com/@ChefKatelyn">
+          <img
+            src="assets/ytt.png"
+            alt="YouTube"
+            style="margin-top: 0; width: 7vh; mix-blend-mode: multiply"
+          />
+        </a>
+      </div>
+      <p>&copy; 2024 Chef Katelyn</p>
+    </footer>
+  </body>
 </html>
