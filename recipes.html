@@ -126,14 +126,10 @@
   </header>
   <p class="headerFont"><i>Recipes</i></p>
 
-  <div class="search-container">
-    <input class="box-control" type="search" id="search" />
-    <button class="footerbutton" id="searchbutton">Search</button>
-  </div>
-  <div>
+
     <h3 class="headerFont2">
       <a href="/recipes-categories/desserts.html">
-        <span>Desserts</span>
+        <span>Breads</span>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -145,7 +141,7 @@
   <div>
      <h3 class="headerFont2">
       <a href="/RECIPES/breads.html">
-        <span>Breads</span>
+        <span>Desserts</span>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -155,15 +151,37 @@
   </div>
   <div>
     <h3 class="headerFont2">
-     <a href="/RECIPES/breads.html">
+     <a href="recipesapps.html">
        <span>Pasta</span>
        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
        </svg>
      </a>
    </h3>
-   <div id="recipecontainer2" class="recentrecipes"></div>
+   <div id="recipecontainer" class="recentrecipes"></div>
  </div>
+ <div>
+  <h3 class="headerFont2">
+   <a href="recipesapps.html">
+     <span>Appetizers</span>
+     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     </svg>
+   </a>
+ </h3>
+ <div id="recipecontainer2" class="recentrecipes"></div>
+</div>
+<div>
+  <h3 class="headerFont2">
+   <a href="recipesbreads.html">
+     <span>Snacks</span>
+     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     </svg>
+   </a>
+ </h3>
+ <div id="recipecontainer2" class="recentrecipes"></div>
+</div>
 
   <footer>
     <p style="font-size: 1.2em; margin-bottom: 0;" class="headerFont">Website Directory:</p>
@@ -188,17 +206,25 @@
 
   <script>
     const recipes = [
+      { id: 4, title: "Fluffy Coffee Buns", image: "assets/cirbun.png", url: "/recipes/coffeeBuns.html", modalImg: 'recipecard/CoffeeBunCARD.jpg' },
+      { id: 2, title: "Petit French Rolls", image: "assets/cirpetit.png", url: "/recipes/checkerboardCookies.html", modalImg: 'recipecard/CheckerboardCARD.jpg' },
+      { id: 3, title: "Cinnamon Cruffins", image: "assets/circruffin.png", url: "/recipes/coffeeCake.html", modalImg: 'recipecard/CruffinCARD.jpg' },
+    ];
+    const recipes2 = [
       { id: 1, title: "Lilo & Stitch Meringues", image: "assets/cirlilo.png", url: "", modalImg: 'recipecard/LiloCARD.jpg' },
       { id: 2, title: "Jellycat Cake | Simple 4\' inch Vanilla Cake", image: "assets/circake.png", url: "/recipes/jellycatCake.html", modalImg: 'recipecard/JellycatCakeCARD.jpg' },
       { id: 4, title: "Jellycat Toast cookies", image: "assets/cirtoast.png", url: "", modalImg: 'recipecard/JellycatToastCARD.jpg' },
       { id: 2, title: "CheckerboardCookies", image: "assets/circhecker.png", url: "/recipes/checkerboardCookies.html", modalImg: 'recipecard/CheckerboardCARD.jpg' },
       { id: 3, title: "Buttery Soft Coffee Cake", image: "assets/circoffee.png", url: "/recipes/coffeeCake.html", modalImg: 'recipecard/coffeecakeCARD.jpg' },
     ];
-    const recipes2 = [
-      { id: 4, title: "Fluffy Coffee Buns", image: "assets/cirbun.png", url: "/recipes/coffeeBuns.html", modalImg: 'recipecard/CoffeeBunCARD.jpg' },
-      { id: 2, title: "Petit French Rolls", image: "assets/cirpetit.png", url: "/recipes/checkerboardCookies.html", modalImg: 'recipecard/CheckerboardCARD.jpg' },
-      { id: 3, title: "Cinnamon Cruffins", image: "assets/circruffin.png", url: "/recipes/coffeeCake.html", modalImg: 'recipecard/CruffinCARD.jpg' },
+    const recipes3 = [
+      { id: 1, title: "Lilo & Stitch Meringues", image: "assets/cirlilo.png", url: "", modalImg: 'recipecard/LiloCARD.jpg' },
+      { id: 2, title: "Jellycat Cake | Simple 4\' inch Vanilla Cake", image: "assets/circake.png", url: "/recipes/jellycatCake.html", modalImg: 'recipecard/JellycatCakeCARD.jpg' },
+      { id: 4, title: "Jellycat Toast cookies", image: "assets/cirtoast.png", url: "", modalImg: 'recipecard/JellycatToastCARD.jpg' },
+      { id: 2, title: "CheckeruoardCookies", image: "assets/circhecker.png", url: "/recipes/checkerboardCookies.html", modalImg: 'recipecard/CheckerboardCARD.jpg' },
+      { id: 3, title: "Buttery Soft Coffee Cake", image: "assets/circoffee.png", url: "/recipes/coffeeCake.html", modalImg: 'recipecard/coffeecakeCARD.jpg' },
     ];
+    
 
     function recipeCard(recipe) {
       return `
