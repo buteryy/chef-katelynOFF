@@ -406,159 +406,38 @@
       </div>
     </header>
 
-  <div class="slideshow-container">
-    <!-- Navigation Buttons -->
-    <div class="nav-btn prev-btn" onclick="plusSlides(-1)">❮</div>
-    <div class="nav-btn next-btn" onclick="plusSlides(1)">❯</div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 8</div>
-      <img src="cookies/avrielcookie.png" alt="Avriel's Birthday Cookie">
-      <div class="text">Avriel's 2nd Birthday</div>
-    </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 8</div>
-      <img src="cookies/cameron cookie.png" alt="Cameron's Birthday Cookie">
-      <div class="text">Cameron's Birthday</div>
-    </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 8</div>
-      <img src="cookies/xaviercookie.JPG" alt="Xavier's Graduation Cookie">
-      <div class="text">Xavier's Graduation</div>
-    </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">4 / 8</div>
-      <img src="cookies/olinacookie.JPEG" alt="Olina's Birthday Cookie">
-      <div class="text">Olina's 19th Birthday</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">5 / 8</div>
-      <img src="cookies/karinacookie.JPG" alt="Karina's Birthday Cookie">
-      <div class="text">Karina's 23rd Birthday</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">6 / 8</div>
-      <img src="cookies/dadcookie.png" alt="Father's Day Cookie">
-      <div class="text">Father's Day</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">7 / 8</div>
-      <img src="cookies/pencilcookie.JPG" alt="Teacher's Appreciation Cookie">
-      <div class="text">Teacher's Appreciation Week</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">8 / 8</div>
-      <img src="cookies/weddingcookie.jpg" alt="Wedding Cookie">
-      <div class="text">Wedding</div>
-    </div>
-  </div>
-
-  <div class="dots-container">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-    <span class="dot" onclick="currentSlide(6)"></span>
-    <span class="dot" onclick="currentSlide(7)"></span>
-    <span class="dot" onclick="currentSlide(8)"></span>
-  </div>
-
-  <script>
-    let slideIndex = 1;
-    let slideTimer;
-
-    showSlides(slideIndex);
-    startAutoSlide();
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-      resetAutoSlide();
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-      resetAutoSlide();
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      
-      // Remove active class from all slides and dots
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        slides[i].classList.remove("active");
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active");
-      }
-      
-      // Show current slide and activate dot
-      slides[slideIndex - 1].style.display = "block";
-      slides[slideIndex - 1].classList.add("active");
-      dots[slideIndex - 1].classList.add("active");
-    }
-
-    function autoSlides() {
-      slideIndex++;
-      if (slideIndex > document.getElementsByClassName("mySlides").length) {
-        slideIndex = 1;
-      }
-      showSlides(slideIndex);
-    }
-
-    function startAutoSlide() {
-      slideTimer = setInterval(autoSlides, 5000);
-    }
-
-    function resetAutoSlide() {
-      clearInterval(slideTimer);
-      startAutoSlide();
-    }
-
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'ArrowLeft') {
-        plusSlides(-1);
-      } else if (e.key === 'ArrowRight') {
-        plusSlides(1);
-      }
-    });
-
-    // Touch/swipe support
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    document.addEventListener('touchstart', function(e) {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    document.addEventListener('touchend', function(e) {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    });
-
-    function handleSwipe() {
-      if (touchEndX < touchStartX - 50) {
-        plusSlides(1); // Swipe left - next slide
-      }
-      if (touchEndX > touchStartX + 50) {
-        plusSlides(-1); // Swipe right - previous slide
-      }
-    }
-  </script>
-
+    <footer style="margin-top: 5rem">
+      <p class="headerFont" style="font-size: 1.2em; margin-bottom: 0">
+        Website Directory:
+      </p>
+      <div>
+        <a href="index.html"><button class="footerbutton">Home</button></a>
+        <a href="recipes.html"><button class="footerbutton">Recipes</button></a>
+        <a href="blog.html"><button class="footerbutton">Blog</button></a>
+        <a href="music.html"><button class="footerbutton">Music</button></a>
+      </div>
+      <br />
+      <div style="text-align: center">
+        <p class="headerFont" style="font-size: 1.2em; margin-bottom: 0">
+          Socials:
+        </p>
+        <a href="https://www.instagram.com/chefkbakes/">
+          <img src="assets/igLogo.png" alt="Instagram" style="width: 6vh" />
+        </a>
+        <a href="https://www.youtube.com/@ChefKatelyn">
+          <img
+            src="assets/ytt.png"
+            alt="YouTube"
+            style="margin-top: 0; width: 7vh; mix-blend-mode: multiply"
+          />
+        </a>
+      </div>
+      <p>&copy; 2024 Chef Katelyn</p>
+    </footer>
 </body>
 
 </html>
