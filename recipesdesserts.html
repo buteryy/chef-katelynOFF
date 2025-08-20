@@ -78,7 +78,7 @@
                   <a href="recipespasta.html">Cookies</a>
                 </li>
                 <li class="dropdownItems">
-                  <a href="recipesdesserts.html">Appetizers</a>
+                  <a href="recipesapps.html">Appetizers</a>
                 </li>
                 <li class="dropdownItems">
                   <a href="recipessnacks.html">Snacks</a>
@@ -130,18 +130,13 @@
   </header>
 
 
-  <div style="margin-top: 100px; display: flex; justify-content: center; align-items: center; height: 300px; background-color: #efe8e4; padding: 20px;">
-    <img src="/assets/desserttime.jpg" alt="Featured Image" style="max-width: 100%; height: auto;">
+  <div style="margin-top: 190px; display: flex; justify-content: center; align-items: center; height: 300px;">
+    <img src="/assets/desserttime.jpg" alt="Featured Image" style="max-width: 1200px; height: auto;">
 </div>
 
   
-    <h3 class="headerFont2">
-      <a href="../recipes-categories/desserts.html">
-        <span>Desserts</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+    <h3 class="headerFont2" style="margin-top:190px;">
+      Desserts
     </h3>
 
     <div id="recipecontainer" class="recentrecipes"></div>
@@ -172,17 +167,12 @@
   <script>
     const recipes = [
     { id: 1, title: "Lilo & Stitch Meringues", image: "../assets/cirlilo.png", modalImg: '../recipecard/LiloCARD.jpg' },
-      { id: 2, title: "Jellycat Cake | Simple 4\' inch Vanilla Cake", image: "../assets/circake.png", modalImg: '../recipecard/JellycatCakeCARD.jpg' },
-      { id: 3, title: "Jellycat Toast cookies", image: "../assets/cirtoast.png", modalImg: '../recipecard/JellycatToastCARD.jpg' },
-      { id: 4, title: "CheckerboardCookies", image: "../assets/circhecker.png", modalImg: '../recipecard/CheckerboardCARD.jpg' },
-      { id: 5, title: "Buttery Soft Coffee Cake", image: "../assets/circoffee.png", modalImg: '../recipecard/coffeecakeCARD.jpg' },
-      { id: 6, title: "CNY Macaroons", image: "/recipecard/CNYMacaroons.png", modalImg: '#' },
-      { id: 7, title: "Coffee Cake Cookies", image: "/recipecard/CoffeeCakeCookies.png", modalImg: '#' },
-      { id: 8, title: "Lemon Cake", image: "/recipecard/LemonCake.png", modalImg: '#' },
-      { id: 9, title: "Chocolate Cookies", image: "/recipecard/ChocoCookie.png", modalImg: '#' },
-      { id: 10, title: "Strawberry Cake", image: "/recipecard/Strawberry Cake.png", modalImg: '#' },
-      { id: 11, title: "Starberry Cake", image: "/recipecard/Strawberry.png", modalImg: '#' },
-
+  { id: 2, title: "Jellycat Cake | Simple 4' inch Vanilla Cake", image: "../assets/circake.png", modalImg: '../recipecard/JellycatCakeCARD.jpg' },
+  { id: 5, title: "Buttery Soft Coffee Cake", image: "../assets/circoffee.png", modalImg: '#' },
+  { id: 6, title: "Almond Crisps", image: "../assets/almondcrisps.jpg", modalImg: '#' },
+  { id: 7, title: "Marc Jacobs Birthday Cake", image: "../assets/birthdaycake.jpg", modalImg: '#' },
+  { id: 10, title: "Earl Grey Pound Cake", image: "../assets/earlgray.jpg", modalImg: '#' },
+  { id: 11, title: "Ma Lai Gao", image: "../assets/malagao.jpg", modalImg: '#' }
     ];
   
     function recipeCard(recipe) {
