@@ -366,3 +366,8 @@ footer {
     .receipe-img {
       cursor: pointer;
     }
+
+
+    #modalImg {
+      width: 700px;
+    }

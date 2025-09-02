@@ -170,7 +170,8 @@
   </div>
 
   <script>
-    // --- Recipe Arrays ---
+   document.addEventListener('DOMContentLoaded', function() {
+         // --- Recipe Arrays ---
     const recipesDesserts = [
   { id: 1, title: "Lilo & Stitch Meringues", image: "../assets/cirlilo.png", modalImg: '../recipecard/LiloCARD.jpg' },
   { id: 2, title: "Jellycat Cake | Simple 4' inch Vanilla Cake", image: "../assets/circake.png", modalImg: '../recipecard/JellycatCakeCARD.jpg' },
@@ -244,6 +245,7 @@ const recipesSnacks = [
     const modal = document.getElementById("myModal");
     const modalImg = document.getElementById("modalImg");
     const span = document.getElementsByClassName("close")[0];
+    const nav = document.getElementById("#top")
 
     function attachModalEventListeners() {
       const recipeImages = document.querySelectorAll(".receipe-img");
@@ -251,6 +253,7 @@ const recipesSnacks = [
         img.onclick = function () {
           modal.style.display = "flex";
           modalImg.src = this.getAttribute("data-modal-src");
+          nav.style.display = "none"
         }
       });
 
@@ -269,7 +272,8 @@ const recipesSnacks = [
     // --- Run on page load ---
     displayRecipes();
     document.getElementById("searchbutton").addEventListener("click", searchRecipes);
-  </script>
+    }
+   )</script>
 </body>
 
 </html>
