@@ -5,131 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chef-Katelyn</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="icon" href="assets/favicon.ico" /><link rel="stylesheet" href="nav.css" />
+    <script defer src="nav.js"></script>
   </head>
   <body>
     <!-- Navigation -->
-    <header id="top">
-      <div id="navDiv" class="navDiv">
-        <a href="https://chef-katelyn.com/index.html">
-          <img
-            class="navLogo"
-            src="assets/navlogo.png"
-            alt="Chef Katelyn Logo"
-          />
-        </a>
-        <nav style="margin-left: auto">
-          <ul style="text-align: right">
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-              <a href="cookieart.html">Cookie Art</a>
-              <div class="dropdown-content">
-                <ul class="dropdownRecipes">
-                  <li class="dropdownItems">
-                    <a href="cookieart.html">About</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="cookiebaby.html">Baby Shower</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="cookiebirthday.html">Birthday</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="cookiewedding.html">Wedding & Anniversary</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="cookiespecial.html">Special Occasions</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            
-            <li class="dropdown">
-              <a href="Collections.html">Collections</a>
-              <div class="dropdown-content">
-                <ul class="dropdownRecipes">
-                  <li class="dropdownItems">
-                    <a href="collectionsbrownies.html">Brownies</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="collectioncakes.html">Cakes</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="collectioncupcakes.html">Cupcakes</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="collectionmacarons.html">Macarons</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="collectionmeringues.html">Meringues</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="dropdown">
-              <a href="recipes.html">Recipes</a>
-              <div class="dropdown-content">
-                <ul class="dropdownRecipes">
-                  <li class="dropdownItems">
-                    <a href="recipesdesserts.html">Desserts</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="recipesbreads.html">Bread</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="recipespasta.html">Cookies</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="recipesapps.html">Appetizers</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="recipessnacks.html">Snacks</a>
-                  <li>
-                </ul>
-              </div>
-            </li>
-            <li class="dropdown">
-              <a href="blog.html">Blog</a>
-              <div class="dropdown-content">
-                <ul class="dropdownRecipes">
-                  <li class="dropdownItems">
-                    <a href="blogsfav.html">Katelyn's Favorites</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="blogs2024.html">2024</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="blogs2025.html">2025</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="blogs2026.html">2026</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="dropdown">
-              <a href="chefscorner.html">Chef's Corner</a>
-              <div class="dropdown-content chefcornerdrop">
-                <ul class="dropdownRecipes">
-                  <li class="dropdownItems">
-                    <a href="cheftips.html">Baking & Cooking Tips</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="chefmeasurement.html">Measurment Converter</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="chefessentials.html">Kitchen Essentials</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="chefsubstitutions.html">Ingredient Substiutions</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <header id="navDiv" class="navDiv">
+      <a class="logoLink" href="https://chef-katelyn.com/index.html">
+        <img class="navLogo" src="assets/navlogo.png" alt="Chef Katelyn Logo" />
+      </a>
+    
+      <!-- Hamburger (mobile) -->
+      <button
+        class="navToggle"
+        id="navToggle"
+        aria-label="Open menu"
+        aria-controls="primaryNav"
+        aria-expanded="false"
+        type="button"
+      >
+        ☰
+      </button>
+    
+      <nav id="primaryNav" class="primaryNav">
+        <ul class="navList">
+          <li class="navItem"><a href="index.html">Home</a></li>
+    
+          <li class="dropdown">
+            <div class="navItemRow">
+              <a class="navTopLink" href="cookieart.html">Cookie Art</a>
+              <button class="dropdownToggle" type="button" aria-expanded="false">▾</button>
+            </div>
+            <div class="dropdown-content">
+              <ul class="dropdownRecipes">
+                <li class="dropdownItems"><a href="cookiebaby.html">Baby Shower</a></li>
+                <li class="dropdownItems"><a href="cookiebirthday.html">Birthday</a></li>
+                <li class="dropdownItems"><a href="cookiewedding.html">Wedding & Anniversary</a></li>
+                <li class="dropdownItems"><a href="cookiespecial.html">Special Occasions</a></li>
+              </ul>
+            </div>
+          </li>
+    
+          <li class="dropdown">
+            <div class="navItemRow">
+              <a class="navTopLink" href="collections.html">Collections</a>
+              <button class="dropdownToggle" type="button" aria-expanded="false">▾</button>
+            </div>
+            <div class="dropdown-content">
+              <ul class="dropdownRecipes">
+                <li class="dropdownItems"><a href="collectionsbrownies.html">Brownies</a></li>
+                <li class="dropdownItems"><a href="collectioncakes.html">Cakes</a></li>
+                <li class="dropdownItems"><a href="collectioncupcakes.html">Cupcakes</a></li>
+                <li class="dropdownItems"><a href="collectionmacarons.html">Macarons</a></li>
+                <li class="dropdownItems"><a href="collectionmeringues.html">Meringues</a></li>
+              </ul>
+            </div>
+          </li>
+    
+          <li class="dropdown">
+            <div class="navItemRow">
+              <a class="navTopLink" href="recipes.html">Recipes</a>
+              <button class="dropdownToggle" type="button" aria-expanded="false">▾</button>
+            </div>
+            <div class="dropdown-content">
+              <ul class="dropdownRecipes">
+                <li class="dropdownItems"><a href="recipesdesserts.html">Desserts</a></li>
+                <li class="dropdownItems"><a href="recipesbreads.html">Bread</a></li>
+                <li class="dropdownItems"><a href="recipespasta.html">Cookies</a></li>
+                <li class="dropdownItems"><a href="recipesapps.html">Appetizers</a></li>
+                <li class="dropdownItems"><a href="recipessnacks.html">Snacks</a></li>
+              </ul>
+            </div>
+          </li>
+    
+          <li class="dropdown">
+            <div class="navItemRow">
+              <a class="navTopLink" href="blog.html">Blog</a>
+              <button class="dropdownToggle" type="button" aria-expanded="false">▾</button>
+            </div>
+            <div class="dropdown-content">
+              <ul class="dropdownRecipes">
+                <li class="dropdownItems"><a href="blogsfav.html">Katelyn's Favorites</a></li>
+                <li class="dropdownItems"><a href="blogs2024.html">2024</a></li>
+                <li class="dropdownItems"><a href="blogs2025.html">2025</a></li>
+                <li class="dropdownItems"><a href="blogs2026.html">2026</a></li>
+              </ul>
+            </div>
+          </li>
+    
+          <!--<li class="dropdown">
+            <div class="navItemRow">
+              <a class="navTopLink" href="chefscorner.html">Chef's Corner</a>
+              <button class="dropdownToggle" type="button" aria-expanded="false">▾</button>
+            </div>
+            <div class="dropdown-content">
+              <ul class="dropdownRecipes">
+                <li class="dropdownItems"><a href="cheftips.html">Baking & Cooking Tips</a></li>
+                <li class="dropdownItems"><a href="chefmeasurement.html">Measurement Converter</a></li>
+                <li class="dropdownItems"><a href="chefessentials.html">Kitchen Essentials</a></li>
+                <li class="dropdownItems"><a href="chefsubstitutions.html">Ingredient Substitutions</a></li>
+              </ul>
+            </div>
+          </li>-->
+        </ul>
+      </nav>
     </header>
+    
 
     <!-- About Section -->
 <div class="container about-section" >
@@ -171,7 +152,271 @@
   </div>
 </div>
 
+<!-- ===== CHEF KATELYN MENU START ===== -->
+<div id="ck-menu">
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+  #ck-menu {
+    max-width: 1100px;
+    margin: 40px auto;
+    font-family: 'Playfair Display', serif;
+    color: #7b4a32;
+  }
+  
+  /* HEADER */
+  #ck-menu .header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+  
+  #ck-menu .logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 2px solid #ead7df;
+  }
+  
+  #ck-menu h1 {
+    margin: 0;
+    font-size: 34px;
+  }
+  
+  #ck-menu .sub {
+    margin-top: 6px;
+    color: #b46c86;
+    font-size: 15px;
+  }
+  
+  /* GRID */
+  #ck-menu .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  /* responsive */
+  @media (max-width: 1000px) {
+    #ck-menu .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #ck-menu .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* CARDS */
+  #ck-menu .card {
+    background: white;
+    border: 2px solid #ead7df;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.25s;
+  }
+  
+  #ck-menu .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  #ck-menu .card.selected {
+    border: 3px solid #c7688a;
+  }
+  
+  #ck-menu .card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+  }
+  
+  #ck-menu .card-content {
+    padding: 14px;
+  }
+  
+  #ck-menu .card h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  #ck-menu .price {
+    color: #a43f67;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  
+  #ck-menu .desc {
+    font-size: 13px;
+    color: #8e6a78;
+    margin-top: 6px;
+  }
+  
+  /* TOTAL */
+  #ck-menu .total-box {
+    margin-top: 25px;
+    padding: 18px;
+    background: white;
+    border-radius: 18px;
+    font-size: 20px;
+    text-align: right;
+    border: 2px solid #ead7df;
+  }
+  </style>
+  
+  <!-- HEADER -->
+  <div class="header">
+    <img class="logo" src="assets/navlogo.png">
+    <div>
+      <h1>Chef Katelyn Menu</h1>
+      <div class="sub">Orders go through Instagram — please DM to confirm</div>
+    </div>
+  </div>
+  
+  <!-- ITEMS -->
+  <div class="grid">
+  
+    <!-- ROW 1 -->
+    <div class="card" onclick="ckToggle(this, 30)">
+      <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b">
+      <div class="card-content">
+        <h3>Macarons</h3>
+        <div class="price">$30</div>
+        <div class="desc">Assorted flavors like matcha, lychee, pistachio.</div>
+      </div>
+    </div>
+  
+    <div class="card" onclick="ckToggle(this, 20)">
+      <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e">
+      <div class="card-content">
+        <h3>Custom Cookie Box</h3>
+        <div class="price">$20</div>
+        <div class="desc">Perfect for events, birthdays, and gifts.</div>
+      </div>
+    </div>
+  
+    <div class="card" onclick="ckToggle(this, 40)">
+      <img src="https://images.unsplash.com/photo-1495214783159-3503fd1b572d">
+      <div class="card-content">
+        <h3>Cookies by the Dozen</h3>
+        <div class="price">$40</div>
+        <div class="desc">Decorated cookies, priced per dozen.</div>
+      </div>
+    </div>
+  
+    <div class="card" onclick="ckToggle(this, 20)">
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c">
+      <div class="card-content">
+        <h3>Brownies</h3>
+        <div class="price">$20</div>
+        <div class="desc">Rich and fudgy brownie selection.</div>
+      </div>
+    </div>
+  
+    <!-- ROW 2 -->
+    <div class="card" onclick="ckToggle(this, 18)">
+      <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d">
+      <div class="card-content">
+        <h3>One Bite Cupcakes</h3>
+        <div class="price">$18</div>
+        <div class="desc">Mini cupcakes with light whipped cream frosting.</div>
+      </div>
+    </div>
+  
+    <div class="card" onclick="ckToggle(this, 24)">
+      <img src="https://images.unsplash.com/photo-1519869325930-281384150729">
+      <div class="card-content">
+        <h3>Cake Pops</h3>
+        <div class="price">$24</div>
+        <div class="desc">Fun and colorful cake pops for parties.</div>
+      </div>
+    </div>
+  
+    <div class="card" onclick="ckToggle(this, 22)">
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c">
+      <div class="card-content">
+        <h3>Mini Brownie Bites</h3>
+        <div class="price">$22</div>
+        <div class="desc">Rich chocolate brownie bites with toppings.</div>
+      </div>
+    </div>
+  
+    <div class="card" onclick="ckToggle(this, 26)">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff">
+      <div class="card-content">
+        <h3>Crown Collection</h3>
+        <div class="price">$26</div>
+        <div class="desc">Mini bundt brownie crowns with fruit toppings.</div>
+      </div>
+    </div>
+  
+    <!-- ROW 3 -->
+    <div class="card" onclick="ckToggle(this, 28)">
+      <img src="https://images.unsplash.com/photo-1505253216365-51c2a29f2f58">
+      <div class="card-content">
+        <h3>Fruit Tart Box</h3>
+        <div class="price">$28</div>
+        <div class="desc">Fresh fruit tarts with light cream and crisp shells.</div>
+      </div>
+    </div>
+  
+    <div class="card" onclick="ckToggle(this, 25)">
+      <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa">
+      <div class="card-content">
+        <h3>Chocolate Cupcakes</h3>
+        <div class="price">$25</div>
+        <div class="desc">Rich chocolate cupcakes topped with smooth frosting.</div>
+      </div>
+    </div>
+  
+    <div class="card" onclick="ckToggle(this, 27)">
+      <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2">
+      <div class="card-content">
+        <h3>Asian Flavor Box</h3>
+        <div class="price">$27</div>
+        <div class="desc">Ube, sesame, matcha, and lychee inspired treats.</div>
+      </div>
+    </div>
+  
+    <div class="card" onclick="ckToggle(this, 23)">
+      <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f">
+      <div class="card-content">
+        <h3>Custom Dessert Box</h3>
+        <div class="price">$23</div>
+        <div class="desc">A mix of treats customized for your event.</div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <!-- TOTAL -->
+  <div class="total-box">
+    Total: $<span id="ck-total">0</span>
+  </div>
+  
+  <script>
+  let ckTotal = 0;
+  
+  function ckToggle(card, price) {
+    if (card.classList.contains("selected")) {
+      card.classList.remove("selected");
+      ckTotal -= price;
+    } else {
+      card.classList.add("selected");
+      ckTotal += price;
+    }
+  
+    document.getElementById("ck-total").innerText = ckTotal;
+  }
+  </script>
+  
+  </div>
+  <!-- ===== CHEF KATELYN MENU END ===== -->
     <section class="video-section">
       <!-- video -->
       <div class="video">
@@ -185,7 +430,7 @@
       <div class="video-section-text-container">
         <h1>Lilo & Stitch Meringues</h1>
         <p>In honor of the new Lilo & Stitch live-action movie, I whipped up these adorable meringues inspired by everyone’s favorite blue alien! These light, airy treats are crisp on the outside, soft on the inside are Perfect for all ages who want something sweet to snack on while watching this Disney classic.</p>
-        <img src="assets/lilo.gif">
+        <img class="lilo-n-stich-img" src="assets/lilo.gif">
         <p>Click below to view the recipe:</p>
         <button id="video-section-img" class="view-more">View</button>
       </div>
@@ -196,15 +441,16 @@
     <!-- Suggestion Form -->
      
     <div
+      class="form-container"
       style="
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        margin-top: 10em;
-        margin-bottom: 10em;
+        margin-bottom: 5em;
+        flex-wrap: wrap;
       "
     >
-      <div style="width: 25%">
+      <div style=" max-width: 300px;">
         <p style="font-size: 1.5em; text-align: center" class="headerFont">
           Recipe Suggestions! Suggest your ideas below!
         </p>
@@ -252,9 +498,10 @@
         </form>
         <p id="response-message"></p>
       </div>
-      <div>
+
+      <div style="min-width: 300px; max-width: 400px;">
         <img
-          style="height: 36vw"
+          width="300"
           src="assets/macaronf.jpg"
           alt="Form Illustration"
         />
@@ -267,7 +514,7 @@
       <p style="font-size: 1.2em; margin-bottom: 0" class="headerFont">
         Website Directory:
       </p>
-      <div style="display: flex; justify-content: center">
+      <div class="footer-links-container">
         <a href="index.html"><button class="footerbutton">Home</button></a>
         <a href="cookieart.html"><button class="footerbutton">Cookie Art</button></a>
         <a href="Collections.html"><button class="footerbutton">Collections</button></a>

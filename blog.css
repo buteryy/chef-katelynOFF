@@ -1,18 +1,264 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+/* =========================
+   FILE: blog.css
+   (merged + cleaned + mobile-friendly)
+========================= */
 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0;
-}
-/* navlogo.png image design*/
-.navLogo {
-  margin: 0;
-  padding-right: 1.5em;
-  padding-top: 0.3em;
-  width: 27em;
+  padding: 0;
+  overflow-x: hidden;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   NAV
+========================= */
+.navDiv {
+  background-color: #efe5e9;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 1001;
+  padding: 10px 12px;
+  gap: 12px;
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+}
+
+.navLogo {
+  width: clamp(160px, 45vw, 320px);
+  margin: 0;
+  padding-top: 0.2em;
+  padding-right: 0.75em;
+}
+
+/* Hamburger */
+.navToggle {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: #4d3e35;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.navToggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Nav container */
+.primaryNav {
+  margin-left: auto;
+}
+
+/* Nav list */
+.navList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display";
+  font-size: clamp(14px, 2.2vw, 20px);
+}
+
+.navItem a,
+.dropdown a {
+  text-decoration: none;
+  color: #aa9688;
+}
+
+.navItem a:hover,
+.dropdown a:hover {
+  color: hotpink;
+  text-decoration: underline;
+}
+
+/* Dropdown structure */
+.dropdown {
+  position: relative;
+}
+
+.navItemRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdownToggle {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #aa9688;
+  font-size: 18px;
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+
+.dropdownToggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Desktop dropdown behavior */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background-color: #efe5e9;
+  min-width: 260px;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  padding: 14px 10px;
+  border-radius: 12px;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.dropdownRecipes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display";
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdownItems {
+  text-align: left;
+}
+
+/* =========================
+   MAIN
+========================= */
+.pageMain {
+  padding: 18px 12px 40px;
+}
+
+.heroCard {
+  background-color: #efe8e4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: min(900px, 92vw);
+  margin: 0 auto 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImg {
+  width: min(520px, 90vw);
+  border-radius: 10px;
+}
+
+/* SEARCH */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 14px auto 18px;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: min(900px, 92vw);
+}
+
+.box-control {
+  width: min(600px, 92vw);
+  height: 44px;
+  padding: 10px 14px;
+  font-family: "Nunito";
+  font-size: 16px; /* prevents iOS zoom */
+  color: #4d3e35;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Blog Cards Container */
+.recentrecipes {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Individual blog card */
+.blogcard {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 238, 240);
+  width: min(900px, 92vw);
+  padding: 1rem;
+  border-radius: 14px;
+  gap: 1rem;
+  flex-wrap: wrap;
+  transition: outline 0.15s ease;
+}
+
+.blogcard:hover {
+  outline: 5px solid pink;
+}
+
+.videos {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.blogimg {
+  width: 110px;
+  max-width: 35vw;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.recipesText {
+  font-family: "Nunito";
+  color: #7c695c;
+  text-decoration: underline;
+  font-size: clamp(16px, 2.2vw, 20px);
+  margin: 0;
+}
+
+.recipeDescription {
+  font-family: "Nunito";
+  font-size: clamp(14px, 2vw, 16px);
+  color: #4d3e35;
+  margin-top: 0.5em;
+}
+
+/* Like button (if used in your cards) */
 .like-btn {
   background-color: lightpink;
   border: none;
@@ -23,266 +269,254 @@ body {
 }
 
 .like-btn:hover {
-  scale: 1.3;
+  transform: scale(1.12);
 }
+
 .like-btn:active {
   background-color: hotpink;
 }
 
-/* HIDING THE COUNTER */
 .like-count {
   display: none;
 }
 
-/* NAV div style*/
-.navDiv {
-  background-color: #efe5e9;
-  align-items: center;
-  position: sticky;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transition: top 0.3s ease;
-  display: flex;
-  z-index: 1001;
-}
-
-/* Home Page HEADING */
-h1 {
-  color: #aa9688;
-  font-family: "Optima";
-  margin: 0;
-  font-size: 29px;
-  font-weight: 150;
-  margin-left: 1em;
-  flex: 1;
-  vertical-align: middle;
-}
-
-/* NAV BAR*/
-nav a:hover {
-  color: hotpink;
-  text-decoration: underline;
-}
-
-.header-nav { /* Not used in blog.html, but kept from your original for completeness */
-  display: flex;
-  align-items: center;
-  background-color: white;
-  margin-left: 30px;
-  margin: 0;
-  overflow: 0;
-  overflow-y: scroll;
-  vertical-align: middle;
-}
-
-ul {
-  list-style-type: none;
-  font-family: "Optima";
-  font-size: 23px;
-  vertical-align: middle;
-}
-
-li {
-  display: inline;
-  margin-left: 30px;
-  margin-right: 40px;
-  font-family: "Playfair Display";
-}
-li a {
-  text-decoration: none;
-  color: #aa9688;
-}
-
-li a:hover {
-  text-decoration: underline;
-  text-decoration-color: #aa9688;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #efe5e9;
-  min-width: 260px;
-  box-shadow: 0px 0px 16px 0px;
-  z-index: 1;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdownItems {
-  text-align: left;
-}
-
-.dropdownRecipes {
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  text-align: left;
-  justify-content: start;
-  list-style: none;
-  line-height: 30px;
-}
-
+/* =========================
+   FOOTER
+========================= */
 footer {
   background-color: #efe5e9;
   text-align: center;
-  padding-top: 2em;
+  padding: 2em 12px;
+}
+
+.footerTitle {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  font-family: "Playfair Display";
+  color: #4d3e35;
+}
+
+.footerButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .footerbutton {
-  margin-left: 1em;
-  margin-right: 1em;
   background-color: #a6998e;
-  margin-top: 20px;
-  padding: 12px 24px;
+  margin-top: 10px;
+  padding: 12px 18px;
   color: white;
   border: none;
   cursor: pointer;
   font-size: 1em;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.3s;
   font-family: "Playfair Display";
+  min-height: 44px;
 }
+
 .footerbutton:hover {
   background-color: #4d3e35;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-.recentblog {
-  background-color: #efe8e4;
-  padding: 2em;
-  width: 64em;
-  margin: 2em;
+.footerSocials {
+  margin-top: 18px;
 }
 
-/*SEARCH BAR*/
-.search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1em;
-  gap: 20px;
-}
-#recipeSearchButton { /* Renamed to #blogSearchButton in HTML and JS */
-  margin: 0;
+.socialIcon {
+  width: 42px;
 }
 
-#search {
+.socialIconYT {
+  width: 50px;
+  mix-blend-mode: multiply;
+}
+
+.copyright {
+  margin-top: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #4d3e35;
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 20px auto;
   padding: 20px;
+  border: 1px solid #888;
+  width: min(900px, 92vw);
+  max-height: 85vh;
+  overflow: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
+  position: relative;
 }
 
-.box-control {
-  width: 20%;
-  padding: 10px;
-  height: 5vh;
-  font-family: "Nunito";
+.close-button {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  cursor: pointer;
+  z-index: 1003;
+  border: none;
+  background: transparent;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+#modalBlogContent {
+  padding: 1.5rem;
+}
+
+#modalBlogContent p {
   font-size: 18px;
-  color: #4d3e35;
+  font-family: "Open Sans", sans-serif;
 }
 
-/*RECENT RECIPES / BLOG CARDS LISTING */
-
-.recipes { /* This class seems to be from a previous recipe listing, might not be used here */
-  padding: 0.5em;
-  margin-inline: 1em;
-  text-align: center;
-}
-
-.recipes img { /* Might apply to blog cards, but .blogimg is more specific */
-  padding-bottom: 0.1em;
-  width: 19vw;
-}
-
-.recipes p { /* Might apply to blog cards, but .recipesText is more specific */
-  padding-inline: 1em;
-  padding-top: 1.2em;
-  font-size: 2em;
-}
-
-.frenchrolltextpic { /* Not found in HTML, likely old */
-  margin-bottom: 2em;
-}
-
-.copyright { /* Not found in HTML, footer handles copyright */
-  font-family: "Times New Roman";
-  text-align: center;
-  padding: 7em;
-}
-
-.blogcard:hover {
-  outline: 5px solid pink;
-}
-
-.newrecipes { /* Not used in blog.html, likely old */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
-}
-
-/*BLOG SPECIFIC STYLES FOR CARDS */
-
-.recentrecipes { /* This is the container for all blog cards */
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
-  flex-direction: column; /* Stacks cards vertically */
-  display: flex;
-}
-
-.heart { /* Not found in HTML, consider removing if not used */
-  width: 25px;
-}
-
-.videos { /* Styles for the image and text layout within each blog card */
-  display: flex; /* Ensures the image and text are side by side */
-  align-items: flex-start; /* Aligns the image and text at the top */
-  gap: 2em; /* Adds space between the image and text */
-}
-
-.blogimg { /* Styles for images within blog cards */
-  width: 16vh;
-  margin: 0; /* Ensures the image stays aligned to the left */
-}
-
-.recipesText { /* Styles for the title within blog cards */
-  font-family: "Nunito";
-  color: #7c695c;
-  text-decoration: underline;
-  font-size: 20px;
-  margin: 0; /* Removes extra margin */
-}
-
-.recipeDescription { /* Styles for the description within blog cards */
-  font-family: "Nunito";
-  font-size: 16px;
-  color: #4d3e35;
-  margin-top: 0.5em; /* Adds spacing between title and description */
-}
-
-.blogcard { /* Styles for individual blog cards in the listing */
+.modal-navigation {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(255, 238, 240);
-  width: 65em;
-  padding: 1.5em;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #eee;
 }
-/* This .blogtext is overridden by allblogs.css due to load order, consider consolidating */
-/*
-.blogtext{ 
-  font-family: 'Open Sans', sans-serif !important;
-  font-size: 0.95rem;
+
+.modal-navigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================
+   BLOG POST PAGE (if you reuse .blogdiv on other pages)
+========================= */
+.blogdiv {
+  width: min(900px, 92vw);
+  margin: 2rem auto;
+  padding: 1.25rem;
+  background-color: rgb(240, 248, 251);
+  border-radius: 12px;
+}
+
+.blogpic {
+  width: min(520px, 92vw);
+  display: block;
+  margin: 0 auto;
+}
+
+.blogtext {
+  font-size: clamp(16px, 2.4vw, 22px);
+  font-family: "Open Sans", sans-serif;
   line-height: 1.6;
   color: #333;
 }
-*/
+
+.bottomImageRow {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.bottomImageRow img {
+  width: min(420px, 92vw);
+  border-radius: 10px;
+}
+
+/* =========================
+   MOBILE NAV BEHAVIOR
+   (collapsible menu)
+========================= */
+
+/* Desktop: hide hamburger, show nav inline */
+@media (min-width: 900px) {
+  .navToggle {
+    display: none;
+  }
+
+  .primaryNav {
+    display: block;
+  }
+}
+
+/* Mobile: show hamburger, nav becomes a panel */
+@media (max-width: 899px) {
+  .primaryNav {
+    display: none;
+    width: 100%;
+  }
+
+  .primaryNav.open {
+    display: block;
+  }
+
+  .navList {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 0 6px;
+  }
+
+  .navItemRow {
+    justify-content: space-between;
+  }
+
+  /* Dropdown content should flow in the page (not absolute) */
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-top: 6px;
+  }
+
+  /* Make links easier to tap */
+  .navTopLink,
+  .navItem a {
+    display: block;
+    padding: 10px 8px;
+    border-radius: 10px;
+  }
+
+  .navTopLink:hover,
+  .navItem a:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  /* Modal buttons stack on tiny screens */
+  .modal-navigation {
+    flex-direction: column;
+  }
+
+  .modal-navigation button {
+    width: 100%;
+  }
+}

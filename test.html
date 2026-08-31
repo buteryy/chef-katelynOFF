@@ -1,0 +1,183 @@
+import React, { useMemo, useState } from "react";
+
+export default function ChefKatelynMenu() {
+  const items = [
+    {
+      id: 1,
+      name: "Macarons",
+      price: 30,
+      image:
+        "https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&w=1200&q=80",
+      description: "Classic French macarons in assorted flavors.",
+    },
+    {
+      id: 2,
+      name: "Custom Cookie Box",
+      price: 20,
+      image:
+        "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1200&q=80",
+      description: "Perfect for birthdays, showers, and gift boxes.",
+    },
+    {
+      id: 3,
+      name: "Cookies by the Dozen",
+      price: 40,
+      image:
+        "https://images.unsplash.com/photo-1495214783159-3503fd1b572d?auto=format&fit=crop&w=1200&q=80",
+      description: "Decorated cookies priced by the dozen.",
+    },
+    {
+      id: 4,
+      name: "Red Velvet Cheesecake Brownies",
+      price: 20,
+      image:
+        "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1200&q=80",
+      description: "Rich brownie squares with cheesecake swirl.",
+    },
+    {
+      id: 5,
+      name: "One Bite Cupcakes",
+      price: 18,
+      image:
+        "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1200&q=80",
+      description: "Mini cupcakes for parties and dessert tables.",
+    },
+    {
+      id: 6,
+      name: "Cake Pops",
+      price: 24,
+      image:
+        "https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=1200&q=80",
+      description: "Cute cake pops with custom colors and toppings.",
+    },
+  ];
+
+  const [selected, setSelected] = useState([]);
+
+  const toggleItem = (id) => {
+    setSelected((prev) =>
+      prev.includes(id) ? prev.filter((itemId) => itemId !== id) : [...prev, id]
+    );
+  };
+
+  const total = useMemo(
+    () =>
+      items
+        .filter((item) => selected.includes(item.id))
+        .reduce((sum, item) => sum + item.price, 0),
+    [items, selected]
+  );
+
+  return (
+    <div className="min-h-screen bg-[#f8f1f4] text-[#7b4a32] p-6 md:p-10">
+      <div className="max-w-7xl mx-auto">
+        <div className="bg-[#f7eff2] border border-[#e5cbd5] rounded-[28px] p-6 md:p-10 shadow-sm mb-8">
+          <div className="flex flex-col md:flex-row gap-6 md:items-center">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-[#dcbec9] flex items-center justify-center overflow-hidden shrink-0">
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+                alt="Chef Katelyn"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div>
+              <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-3">
+                Chef Katelyn Menu
+              </h1>
+              <p className="text-lg text-[#b46c86] mb-2">
+                Pick as many boxes as you want and the total will update automatically.
+              </p>
+              <p className="text-sm text-[#9b7080]">
+                Great for custom orders, events, gifts, and dessert tables.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {items.map((item) => {
+            const isSelected = selected.includes(item.id);
+
+            return (
+              <button
+                key={item.id}
+                onClick={() => toggleItem(item.id)}
+                className={`text-left rounded-[26px] overflow-hidden border transition-all bg-white shadow-sm hover:shadow-md hover:-translate-y-1 ${
+                  isSelected
+                    ? "border-[#c7688a] ring-2 ring-[#e5a8bb]"
+                    : "border-[#ead7df]"
+                }`}
+              >
+                <div className="h-56 overflow-hidden relative">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <div
+                      className={`w-7 h-7 rounded-md border-2 flex items-center justify-center bg-white/90 ${
+                        isSelected ? "border-[#c7688a]" : "border-[#d8b8c4]"
+                      }`}
+                    >
+                      {isSelected && <span className="text-[#c7688a] text-sm">✓</span>}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-5">
+                  <div className="flex items-start justify-between gap-4 mb-2">
+                    <h2 className="text-2xl font-serif font-semibold leading-tight">
+                      {item.name}
+                    </h2>
+                    <span className="text-xl font-semibold text-[#a43f67] whitespace-nowrap">
+                      ${item.price.toFixed(2)}
+                    </span>
+                  </div>
+
+                  <p className="text-[#8e6a78] text-sm leading-6 mb-4">
+                    {item.description}
+                  </p>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-[#b46c86]">
+                      {isSelected ? "Added to total" : "Click to add"}
+                    </span>
+                    <span
+                      className={`px-4 py-2 rounded-full text-sm font-medium ${
+                        isSelected
+                          ? "bg-[#f7d9e4] text-[#9d335f]"
+                          : "bg-[#f7f1f4] text-[#9b7080]"
+                      }`}
+                    >
+                      {isSelected ? "Selected" : "Select"}
+                    </span>
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="sticky bottom-6 mt-10">
+          <div className="max-w-3xl mx-auto bg-white border border-[#ead7df] rounded-[24px] shadow-lg px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <p className="text-sm text-[#b46c86]">Selected items</p>
+              <p className="text-lg font-medium text-[#7b4a32]">
+                {selected.length} {selected.length === 1 ? "box" : "boxes"} chosen
+              </p>
+            </div>
+
+            <div className="text-right">
+              <p className="text-sm text-[#b46c86]">Total Price</p>
+              <p className="text-3xl font-semibold text-[#a43f67]">
+                ${total.toFixed(2)}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

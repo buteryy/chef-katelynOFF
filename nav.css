@@ -1,0 +1,241 @@
+/* =========================
+   FILE: nav.css
+   Shared navbar styles
+========================= */
+
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* NAV WRAPPER */
+.navDiv {
+  background-color: #efe5e9;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 1001;
+  padding: 10px 12px;
+  gap: 12px;
+}
+
+/* Logo */
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+}
+
+.navLogo {
+  width: clamp(160px, 45vw, 320px);
+  margin: 0;
+  padding-top: 0.2em;
+  padding-right: 0.75em;
+}
+
+/* Hamburger */
+.navToggle {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: #4d3e35;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.navToggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Nav container */
+.primaryNav {
+  margin-left: auto;
+}
+
+/* Nav list */
+.navList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display";
+  font-size: clamp(14px, 2.2vw, 20px);
+}
+
+/* Links */
+.navItem a,
+.dropdown a {
+  text-decoration: none;
+  color: #aa9688;
+}
+
+.navItem a:hover,
+.dropdown a:hover {
+  color: hotpink;
+  text-decoration: underline;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.navItemRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdownToggle {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #aa9688;
+  font-size: 18px;
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+
+.dropdownToggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Desktop dropdown popover */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background-color: #efe5e9;
+  min-width: min(260px, 85vw);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  padding: 14px 10px;
+  border-radius: 12px;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.dropdownRecipes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display";
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdownItems {
+  text-align: left;
+}
+
+/* =========================
+   RESPONSIVE NAV BEHAVIOR
+========================= */
+
+/* Desktop: hide hamburger */
+@media (min-width: 900px) {
+  .navToggle {
+    display: none;
+  }
+
+  .primaryNav {
+    display: block;
+  }
+}
+
+/* Mobile: collapsible menu */
+@media (max-width: 899px) {
+  .primaryNav {
+    display: none;
+    width: 100%;
+  }
+
+  .primaryNav.open {
+    display: block;
+  }
+
+  .navList {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 0 6px;
+  }
+
+  .navItemRow {
+    justify-content: space-between;
+  }
+
+  /* Dropdown content flows in page on mobile */
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-top: 6px;
+  }
+
+  /* Tap targets */
+  .navTopLink,
+  .navItem a {
+    display: block;
+    padding: 10px 8px;
+    border-radius: 10px;
+  }
+
+  .navTopLink:hover,
+  .navItem a:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* ===== FORCE MOBILE COLLAPSE (put at bottom of nav.css) ===== */
+
+@media (max-width: 899px) {
+    .primaryNav {
+      display: none !important;
+      width: 100%;
+    }
+  
+    .primaryNav.open {
+      display: block !important;
+    }
+  
+    .navToggle {
+      display: inline-flex !important;
+      margin-left: auto;
+      z-index: 2000;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .primaryNav {
+      display: block !important;
+    }
+  
+    .navToggle {
+      display: none !important;
+    }
+  }
+  

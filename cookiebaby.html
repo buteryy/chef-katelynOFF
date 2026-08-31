@@ -2,132 +2,112 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" /> <link rel="icon" href="assets/favicon.ico" /><link rel="stylesheet" href="nav.css" />
+    <script defer src="nav.js"></script>
     <title>Chef Katelyn-Music</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
 
-    <header id="top">
-      <div id="navDiv" class="navDiv">
-        <a href="https://chef-katelyn.com/index.html">
-          <img
-            class="navLogo"
-            src="assets/navlogo.png"
-            alt="Chef Katelyn Logo"
-          />
-        </a>
-        <nav style="margin-left: auto">
-          <ul style="text-align: right">
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-              <a href="cookieart.html">Cookie Art</a>
-              <div class="dropdown-content">
-                <ul class="dropdownRecipes">
-                  <li class="dropdownItems">
-                    <a href="cookieart.html">About</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="cookiebaby.html">Baby Shower</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="cookiebirthday.html">Birthday</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="cookiewedding.html">Wedding & Anniversary</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="cookiespecial.html">Special Occasions</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            
-            <li class="dropdown">
-              <a href="Collections.html">Collections</a>
-              <div class="dropdown-content">
-                <ul class="dropdownRecipes">
-                  <li class="dropdownItems">
-                    <a href="collectionsbrownies.html">Brownies</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="collectioncakes.html">Cakes</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="collectioncupcakes.html">Cupcakes</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="collectionmacarons.html">Macarons</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="collectionmeringues.html">Meringues</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="dropdown">
-              <a href="recipes.html">Recipes</a>
-              <div class="dropdown-content">
-                <ul class="dropdownRecipes">
-                  <li class="dropdownItems">
-                    <a href="recipesdesserts.html">Desserts</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="recipesbreads.html">Bread</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="recipespasta.html">Cookies</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="recipesapps.html">Appetizers</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="recipessnacks.html">Snacks</a>
-                  <li>
-                </ul>
-              </div>
-            </li>
-            <li class="dropdown">
-              <a href="blog.html">Blog</a>
-              <div class="dropdown-content">
-                <ul class="dropdownRecipes">
-                  <li class="dropdownItems">
-                    <a href="blogsfav.html">Katelyn's Favorites</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="blogs2024.html">2024</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="blogs2025.html">2025</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="blogs2026.html">2026</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="dropdown">
-              <a href="chefscorner.html">Chef's Corner</a>
-              <div class="dropdown-content chefcornerdrop">
-                <ul class="dropdownRecipes">
-                  <li class="dropdownItems">
-                    <a href="cheftips.html">Baking & Cooking Tips</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="chefmeasurement.html">Measurment Converter</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="chefessentials.html">Kitchen Essentials</a>
-                  </li>
-                  <li class="dropdownItems">
-                    <a href="chefsubstitutions.html">Ingredient Substiutions</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <header id="navDiv" class="navDiv">
+      <a class="logoLink" href="https://chef-katelyn.com/index.html">
+        <img class="navLogo" src="assets/navlogo.png" alt="Chef Katelyn Logo" />
+      </a>
+    
+      <!-- Hamburger (mobile) -->
+      <button
+        class="navToggle"
+        id="navToggle"
+        aria-label="Open menu"
+        aria-controls="primaryNav"
+        aria-expanded="false"
+        type="button"
+      >
+        ☰
+      </button>
+    
+      <nav id="primaryNav" class="primaryNav">
+        <ul class="navList">
+          <li class="navItem"><a href="index.html">Home</a></li>
+    
+          <li class="dropdown">
+            <div class="navItemRow">
+              <a class="navTopLink" href="cookieart.html">Cookie Art</a>
+              <button class="dropdownToggle" type="button" aria-expanded="false">▾</button>
+            </div>
+            <div class="dropdown-content">
+              <ul class="dropdownRecipes">
+                <li class="dropdownItems"><a href="cookiebaby.html">Baby Shower</a></li>
+                <li class="dropdownItems"><a href="cookiebirthday.html">Birthday</a></li>
+                <li class="dropdownItems"><a href="cookiewedding.html">Wedding & Anniversary</a></li>
+                <li class="dropdownItems"><a href="cookiespecial.html">Special Occasions</a></li>
+              </ul>
+            </div>
+          </li>
+    
+          <li class="dropdown">
+            <div class="navItemRow">
+              <a class="navTopLink" href="collections.html">Collections</a>
+              <button class="dropdownToggle" type="button" aria-expanded="false">▾</button>
+            </div>
+            <div class="dropdown-content">
+              <ul class="dropdownRecipes">
+                <li class="dropdownItems"><a href="collectionsbrownies.html">Brownies</a></li>
+                <li class="dropdownItems"><a href="collectioncakes.html">Cakes</a></li>
+                <li class="dropdownItems"><a href="collectioncupcakes.html">Cupcakes</a></li>
+                <li class="dropdownItems"><a href="collectionmacarons.html">Macarons</a></li>
+                <li class="dropdownItems"><a href="collectionmeringues.html">Meringues</a></li>
+              </ul>
+            </div>
+          </li>
+    
+          <li class="dropdown">
+            <div class="navItemRow">
+              <a class="navTopLink" href="recipes.html">Recipes</a>
+              <button class="dropdownToggle" type="button" aria-expanded="false">▾</button>
+            </div>
+            <div class="dropdown-content">
+              <ul class="dropdownRecipes">
+                <li class="dropdownItems"><a href="recipesdesserts.html">Desserts</a></li>
+                <li class="dropdownItems"><a href="recipesbreads.html">Bread</a></li>
+                <li class="dropdownItems"><a href="recipespasta.html">Cookies</a></li>
+                <li class="dropdownItems"><a href="recipesapps.html">Appetizers</a></li>
+                <li class="dropdownItems"><a href="recipessnacks.html">Snacks</a></li>
+              </ul>
+            </div>
+          </li>
+    
+          <li class="dropdown">
+            <div class="navItemRow">
+              <a class="navTopLink" href="blog.html">Blog</a>
+              <button class="dropdownToggle" type="button" aria-expanded="false">▾</button>
+            </div>
+            <div class="dropdown-content">
+              <ul class="dropdownRecipes">
+                <li class="dropdownItems"><a href="blogsfav.html">Katelyn's Favorites</a></li>
+                <li class="dropdownItems"><a href="blogs2024.html">2024</a></li>
+                <li class="dropdownItems"><a href="blogs2025.html">2025</a></li>
+                <li class="dropdownItems"><a href="blogs2026.html">2026</a></li>
+              </ul>
+            </div>
+          </li>
+    
+          <li class="dropdown">
+            <div class="navItemRow">
+              <a class="navTopLink" href="chefscorner.html">Chef's Corner</a>
+              <button class="dropdownToggle" type="button" aria-expanded="false">▾</button>
+            </div>
+            <div class="dropdown-content">
+              <ul class="dropdownRecipes">
+                <li class="dropdownItems"><a href="cheftips.html">Baking & Cooking Tips</a></li>
+                <li class="dropdownItems"><a href="chefmeasurement.html">Measurement Converter</a></li>
+                <li class="dropdownItems"><a href="chefessentials.html">Kitchen Essentials</a></li>
+                <li class="dropdownItems"><a href="chefsubstitutions.html">Ingredient Substitutions</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
-
+    
     <!-- Include Google Font in the <head> of your HTML -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
